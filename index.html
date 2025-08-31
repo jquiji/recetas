@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grabadora de Recetas</title>
+<style>
+  :root { color-scheme: light; }
+  body { font-family: system-ui, Arial, "Segoe UI"; margin: 20px; background:#fafafa; }
+  .card { max-width: 560px; margin: auto; padding: 18px; background:#fff; border:1px solid #e5e5e5; border-radius: 14px; box-shadow: 0 2px 24px rgba(0,0,0,0.04); }
+  h2 { margin: 0 0 8px; }
+  p.help { margin: 0 0 14px; color:#555; }
+  label { display:block; margin: 10px 0 6px; font-weight: 600; }
+  input, textarea, button { width:100%; padding:12px; border:1px solid #ccc; border-radius:10px; font-size:15px; }
+  input:focus, textarea:focus, button:focus { outline: 3px solid #e6f0ff; border-color:#80aaff; }
+  .row { display:flex; gap:10px; }
+  .row > * { flex:1 }
+  .pill { display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #ddd; background:#fff; font-size:13px; color:#444; }
+  .muted { color:#666; font-size: 13px; }
+  .ok { color:#096; }
+  .err { color:#900; }
+  .actions { display:flex; gap:10px; margin-top: 12px; }
+  .tip { font-size: 12px; color:#666; margin-top: 8px; }
+</style>
+
+<div class="card">
+  <h2>Grabadora de Recetas</h2>
+  <p class="help">Graba la receta y envíala al sistema. Capturamos <b>Nombre</b>, <b>Teléfono</b> y el <b>Audio</b>.</p>
+
+  <label>Nombre completo del paciente</label>
+  <input id="paciente" placeholder="Ej: José Fernando Quijivix" required />
+
+  <label>Teléfono (WhatsApp, formato +502########)</label>
+  <input id="telefono" placeholder="+502XXXXXXXX" required />
+
+  <label>Diagnóstico (opcional)</label>
+  <input id="diagnostico" placeholder="Acné, dermatitis..." />
+
+  <div style="margin:10px 0">
+    <span id="estado" class="pill">Listo para grabar</span>
+  </div>
+
+  <div class="actions">
+    <button id="btnRec">🎙️ Iniciar grabación</button>
+    <button id="btnStop" disabled>⏹️ Detener y enviar</button>
+  </div>
+
+  <p id="msg" class="muted"></p>
+  <p class="tip">Permite el acceso al micrófono. En iPhone/Safari, debe estar en HTTPS (GitHub Pages ya lo es).</p>
+</div>
+
+<script>
+/**
+ * 1) REEMPLAZA ESTA URL por tu Webhook de n8n (PRODUCTION URL)
+ *    Ejemplo: const WEBHOOK = "https://n8n.tu-dominio.com/webhook/recetas-audio";
+ */
+const WEBHOOK = "https://TU_INSTANCIA_N8N/webhook/recetas-audio"; // <-- CAMBIA ESTO
+
+// --- utilidades ---
+const $ = (id) => document.getElementById(id);
+const pacienteEl = $('paciente');
+const telefonoEl = $('telefono');
+const diagnosticoEl = $('diagnostico');
+const btnRec = $('btnRec');
+const btnStop = $('btnStop');
+const estado = $('estado');
+const msg = $('msg');
+
+let mediaRecorder, chunks = [];
+let chosenMime = null;
+let fileExt = 'webm';
+
+function validarTelefonoE164(telefono) {
+  // Validación simple: + y 8-15 dígitos (para +502########)
+  const re = /^\+[1-9]\d{7,14}$/;
+  return re.test(telefono);
+}
+
+function pickMimeType() {
+  const candidates = [
+    { mime: 'audio/webm;codecs=opus', ext: 'webm' },
+    { mime: 'audio/webm', ext: 'webm' },
+    { mime: 'audio/mp4', ext: 'm4a' },   // iOS algunos soportan
+    { mime: 'audio/ogg;codecs=opus', ext: 'ogg' },
+    { mime: 'audio/ogg', ext: 'ogg' },
+    { mime: 'audio/wav', ext: 'wav' }
+  ];
+  for (const c of candidates) {
+    if (window.MediaRecorder && MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(c.mime)) {
+      chosenMime = c.mime; fileExt = c.ext; return;
+    }
+  }
+  chosenMime = null;
+}
+
+pickMimeType();
+
+btnRec.onclick = async () => {
+  // Validaciones de campos antes de grabar (para evitar trabajo en vano)
+  const paciente = pacienteEl.value.trim();
+  const telefono = telefonoEl.value.trim();
+  if (!paciente) { alert('Ingresa el nombre completo del paciente.'); return; }
+  if (!validarTelefonoE164(telefono)) { alert('Teléfono inválido. Usa formato +502XXXXXXXX.'); return; }
+
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    alert('Tu navegador no soporta grabación. Usa la app de voz y luego la Opción B (form de n8n).');
+    return;
+  }
+  if (!chosenMime) {
+    alert('Formato de audio no soportado por este navegador. Prueba con Chrome (Android) o Safari actualizado (iOS).');
+    return;
+  }
+
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    chunks = [];
+    mediaRecorder = new MediaRecorder(stream, { mimeType: chosenMime });
+    mediaRecorder.ondataavailable = e => { if (e.data && e.data.size > 0) chunks.push(e.data); };
+    mediaRecorder.onstart = () => { estado.textContent = 'Grabando...'; };
+    mediaRecorder.onstop = async () => {
+      try {
+        estado.textContent = 'Procesando...';
+
+        const blob = new Blob(chunks, { type: chosenMime });
+        const fileName = `receta_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.${fileExt}`;
+        const file = new File([blob], fileName, { type: chosenMime });
+
+        const fd = new FormData();
+        fd.append('audio', file);
+        fd.append('paciente', pacienteEl.value.trim());
+        fd.append('telefono', telefonoEl.value.trim());
+        fd.append('diagnostico', diagnosticoEl.value.trim());
+
+        btnRec.disabled = true;
+        btnStop.disabled = true;
+
+        const res = await fetch(WEBHOOK, { method: 'POST', body: fd });
+        if (!res.ok) throw new Error('El servidor respondió con error');
+        let data = {};
+        try { data = await res.json(); } catch { /* puede no venir JSON */ }
+
+        estado.textContent = 'Enviado ✅';
+        msg.innerHTML = '<span class="ok">Listo. El audio se envió al sistema.</span>';
+      } catch (e) {
+        estado.textContent = 'Error al enviar';
+        msg.innerHTML = '<span class="err">' + (e.message || e) + '</span>';
+      } finally {
+        btnRec.disabled = false;
+        btnStop.disabled = true;
+      }
+    };
+
+    mediaRecorder.start();
+    btnRec.disabled = true;
+    btnStop.disabled = false;
+
+  } catch (e) {
+    alert('No se pudo acceder al micrófono. Revisa permisos/HTTPS.');
+    console.error(e);
+  }
+};
+
+btnStop.onclick = () => {
+  if (mediaRecorder && mediaRecorder.state === 'recording') {
+    mediaRecorder.stop();
+    estado.textContent = 'Deteniendo...';
+    btnStop.disabled = true;
+  }
+};
+</script>
+</html>
