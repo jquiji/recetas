@@ -23,11 +23,12 @@
   #timer { font-weight: bold; margin-left: 10px; }
   .recording { color: red; animation: blink 1s step-start infinite; }
   @keyframes blink { 50% { opacity: 0; } }
+  .small-input { width: 80px; text-align: center; }
 </style>
 
 <div class="card">
   <h2>Grabadora de Recetas</h2>
-  <p class="help">Graba la receta y envíala al sistema. Capturamos <b>Nombre</b>, <b>Teléfono</b> y el <b>Audio</b>.</p>
+  <p class="help">Graba la receta y envíala al sistema. Capturamos <b>Nombre</b>, <b>Apellido</b>, <b>Teléfono</b> y el <b>Audio</b>.</p>
 
   <div class="row" style="align-items:center; margin:6px 0 10px">
     <span id="pacienteIdx" class="pill">Paciente #1</span>
@@ -37,11 +38,22 @@
     </label>
   </div>
 
-  <label>Nombre completo del paciente</label>
-  <input id="paciente" placeholder="Ej: José Fernando Quijivix" required />
+  <div class="row">
+    <div>
+      <label>Nombre</label>
+      <input id="nombre" placeholder="Ej: José" required />
+    </div>
+    <div>
+      <label>Apellido</label>
+      <input id="apellido" placeholder="Ej: Quijivix" required />
+    </div>
+  </div>
 
-  <label>Teléfono (WhatsApp, formato +502########)</label>
-  <input id="telefono" placeholder="+502XXXXXXXX" required />
+  <label>Teléfono</label>
+  <div class="row">
+    <input id="codigo" class="small-input" value="+502" maxlength="5" required />
+    <input id="telefono" placeholder="3022-4593" maxlength="9" required />
+  </div>
 
   <label>Diagnóstico (opcional)</label>
   <input id="diagnostico" placeholder="Acné, dermatitis..." />
@@ -64,10 +76,11 @@
 
 <script>
 const WEBHOOK = "https://nextgen-ai-jq.app.n8n.cloud/webhook/recetas-audio"; 
-const DEFAULT_CC = "+502";
 
 const $ = (id) => document.getElementById(id);
-const pacienteEl = $('paciente');
+const nombreEl = $('nombre');
+const apellidoEl = $('apellido');
+const codigoEl = $('codigo');
 const telefonoEl = $('telefono');
 const diagnosticoEl = $('diagnostico');
 const btnRec = $('btnRec');
@@ -87,8 +100,52 @@ let fileExt = 'webm';
 let audioFile = null;
 let timer, seconds = 0;
 
-function validarTelefonoE164(t) { return /^\+[1-9]\d{7,14}$/.test(t); }
+// ---- Teléfono con guion automático ----
+telefonoEl.addEventListener("input", (e) => {
+  let val = telefonoEl.value.replace(/\D/g, ""); // solo números
+  if (val.length > 4) {
+    telefonoEl.value = val.slice(0,4) + "-" + val.slice(4,8);
+  } else {
+    telefonoEl.value = val;
+  }
+});
 
+// ---- Timer ----
+function startTimer() {
+  seconds = 0;
+  timerEl.textContent = "0:00";
+  timerEl.classList.add("recording");
+  timer = setInterval(() => {
+    seconds++;
+    let m = Math.floor(seconds / 60);
+    let s = (seconds % 60).toString().padStart(2,'0');
+    timerEl.textContent = `${m}:${s}`;
+  }, 1000);
+}
+function stopTimer() { clearInterval(timer); timerEl.classList.remove("recording"); }
+function resetTimer() { stopTimer(); timerEl.textContent = ""; }
+
+// ---- Reset paciente ----
+function resetForNextPatient() {
+  if (!autoResetEl.checked) return;
+  idx++;
+  pacienteIdx.textContent = `Paciente #${idx}`;
+  nombreEl.value = "";
+  apellidoEl.value = "";
+  codigoEl.value = "+502";
+  telefonoEl.value = "";
+  diagnosticoEl.value = "";
+  estado.textContent = "Listo para grabar";
+  btnRec.disabled = false;
+  btnStop.disabled = true;
+  btnReset.disabled = true;
+  btnSend.disabled = true;
+  audioFile = null;
+  resetTimer();
+  nombreEl.focus();
+}
+
+// ---- Grabación ----
 function pickMimeType() {
   const candidates = [
     { mime: 'audio/webm;codecs=opus', ext: 'webm' },
@@ -107,42 +164,14 @@ function pickMimeType() {
 }
 pickMimeType();
 
-function startTimer() {
-  seconds = 0;
-  timerEl.textContent = "0:00";
-  timerEl.classList.add("recording");
-  timer = setInterval(() => {
-    seconds++;
-    let m = Math.floor(seconds / 60);
-    let s = (seconds % 60).toString().padStart(2,'0');
-    timerEl.textContent = `${m}:${s}`;
-  }, 1000);
-}
-function stopTimer() { clearInterval(timer); timerEl.classList.remove("recording"); }
-function resetTimer() { stopTimer(); timerEl.textContent = ""; }
-
-function resetForNextPatient() {
-  if (!autoResetEl.checked) return;
-  idx++;
-  pacienteIdx.textContent = `Paciente #${idx}`;
-  pacienteEl.value = "";
-  telefonoEl.value = DEFAULT_CC;
-  diagnosticoEl.value = "";
-  estado.textContent = "Listo para grabar";
-  btnRec.disabled = false;
-  btnStop.disabled = true;
-  btnReset.disabled = true;
-  btnSend.disabled = true;
-  audioFile = null;
-  resetTimer();
-  pacienteEl.focus();
-}
-
 btnRec.onclick = async () => {
-  const nombre = pacienteEl.value.trim();
-  const telefono = telefonoEl.value.trim();
-  if (!nombre) { alert("Ingresa el nombre completo del paciente."); return; }
-  if (!validarTelefonoE164(telefono)) { alert("Teléfono inválido. Usa formato +502XXXXXXXX."); return; }
+  const nombre = nombreEl.value.trim();
+  const apellido = apellidoEl.value.trim();
+  const telefono = telefonoEl.value.replace(/\D/g, ""); // limpiar guion
+
+  if (!nombre || !apellido) { alert("Ingresa nombre y apellido."); return; }
+  if (telefono.length !== 8) { alert("El teléfono debe tener 8 dígitos."); return; }
+
   if (!navigator.mediaDevices?.getUserMedia) { alert("Tu navegador no soporta grabación."); return; }
   if (!chosenMime) { alert("Formato de audio no soportado."); return; }
 
@@ -196,25 +225,24 @@ btnSend.onclick = async () => {
     estado.textContent = "Enviando...";
     const fd = new FormData();
     fd.append("audio", audioFile);
-    fd.append("paciente", pacienteEl.value.trim());
-    fd.append("telefono", telefonoEl.value.trim());
+    fd.append("paciente", nombreEl.value.trim() + " " + apellidoEl.value.trim());
+    fd.append("telefono", codigoEl.value.trim() + telefonoEl.value.replace(/\D/g,""));
     fd.append("diagnostico", diagnosticoEl.value.trim());
+
     const res = await fetch(WEBHOOK, { method: "POST", body: fd });
     if (!res.ok) throw new Error("Error al enviar");
-    
+
     estado.textContent = "Enviado ✅";
     msg.innerHTML = '<span class="ok">✅ El audio se envió al sistema.</span>';
 
-    setTimeout(() => { resetForNextPatient(); }, 1500);
+    setTimeout(() => { resetForNextPatient(); }, 2000);
   } catch (e) {
     estado.textContent = "Error al enviar";
     msg.innerHTML = `<span class="err">${e.message || e}</span>`;
   }
 };
 
-if (!telefonoEl.value) telefonoEl.value = DEFAULT_CC;
-pacienteEl.focus();
+nombreEl.focus();
 </script>
 </html>
-
 
