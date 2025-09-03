@@ -26,6 +26,15 @@
   <h2>Grabadora de Recetas</h2>
   <p class="help">Graba la receta y envíala al sistema. Capturamos <b>Nombre</b>, <b>Teléfono</b> y el <b>Audio</b>.</p>
 
+  <!-- NUEVO: contador de pacientes y switch -->
+  <div class="row" style="align-items:center; margin:6px 0 10px">
+    <span id="pacienteIdx" class="pill">Paciente #1</span>
+    <label class="pill" style="display:flex; gap:8px; align-items:center; cursor:pointer">
+      <input id="autoReset" type="checkbox" checked />
+      Autolimpiar
+    </label>
+  </div>
+
   <label>Nombre completo del paciente</label>
   <input id="paciente" placeholder="Ej: José Fernando Quijivix" required />
 
@@ -49,85 +58,92 @@
 </div>
 
 <script>
-/**
- * 1) REEMPLAZA ESTA URL por tu Webhook de n8n (PRODUCTION URL)
- *    Ejemplo: const WEBHOOK = "https://n8n.tu-dominio.com/webhook/recetas-audio";
- */
-const WEBHOOK = "https://nextgen-ai-jq.app.n8n.cloud/webhook/recetas-audio"; // <-- CAMBIA ESTO
+// ===== CONFIG =====
+const WEBHOOK = "https://nextgen-ai-jq.app.n8n.cloud/webhook/recetas-audio"; // tu webhook n8n
+const DEFAULT_CC = "+502"; // prefijo inicial de teléfono
 
-// --- utilidades ---
+// ===== helpers =====
 const $ = (id) => document.getElementById(id);
-const pacienteEl = $('paciente');
-const telefonoEl = $('telefono');
-const diagnosticoEl = $('diagnostico');
-const btnRec = $('btnRec');
-const btnStop = $('btnStop');
-const estado = $('estado');
-const msg = $('msg');
+const pacienteEl   = $('paciente');
+const telefonoEl   = $('telefono');
+const diagnosticoEl= $('diagnostico');
+const btnRec       = $('btnRec');
+const btnStop      = $('btnStop');
+const estado       = $('estado');
+const msg          = $('msg');
+const pacienteIdx  = $('pacienteIdx');
+const autoResetEl  = $('autoReset');
 
+let idx = 1;
 let mediaRecorder, chunks = [];
 let chosenMime = null;
 let fileExt = 'webm';
 
-function validarTelefonoE164(telefono) {
-  // Validación simple: + y 8-15 dígitos (para +502########)
-  const re = /^\+[1-9]\d{7,14}$/;
-  return re.test(telefono);
-}
+// Validar teléfono en formato E.164
+const validarTelefonoE164 = (t) => /^\+[1-9]\d{7,14}$/.test(t);
 
+// Elegir MIME compatible
 function pickMimeType() {
   const candidates = [
     { mime: 'audio/webm;codecs=opus', ext: 'webm' },
-    { mime: 'audio/webm', ext: 'webm' },
-    { mime: 'audio/mp4', ext: 'm4a' },   // iOS algunos soportan
-    { mime: 'audio/ogg;codecs=opus', ext: 'ogg' },
-    { mime: 'audio/ogg', ext: 'ogg' },
-    { mime: 'audio/wav', ext: 'wav' }
+    { mime: 'audio/webm',            ext: 'webm' },
+    { mime: 'audio/mp4',             ext: 'm4a'  },
+    { mime: 'audio/ogg;codecs=opus', ext: 'ogg'  },
+    { mime: 'audio/ogg',             ext: 'ogg'  },
+    { mime: 'audio/wav',             ext: 'wav'  },
   ];
   for (const c of candidates) {
-    if (window.MediaRecorder && MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(c.mime)) {
+    if (window.MediaRecorder?.isTypeSupported?.(c.mime)) {
       chosenMime = c.mime; fileExt = c.ext; return;
     }
   }
   chosenMime = null;
 }
-
 pickMimeType();
 
-btnRec.onclick = async () => {
-  // Validaciones de campos antes de grabar (para evitar trabajo en vano)
-  const paciente = pacienteEl.value.trim();
-  const telefono = telefonoEl.value.trim();
-  if (!paciente) { alert('Ingresa el nombre completo del paciente.'); return; }
-  if (!validarTelefonoE164(telefono)) { alert('Teléfono inválido. Usa formato +502XXXXXXXX.'); return; }
+// Resetear para siguiente paciente
+function resetForNextPatient() {
+  if (!autoResetEl.checked) return;
+  idx += 1;
+  pacienteIdx.textContent = `Paciente #${idx}`;
+  pacienteEl.value = '';
+  telefonoEl.value = DEFAULT_CC;
+  diagnosticoEl.value = '';
+  estado.textContent = 'Listo para grabar';
+  msg.textContent = '';
+  btnRec.disabled = false;
+  btnStop.disabled = true;
+  pacienteEl.focus();
+}
 
-  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-    alert('Tu navegador no soporta grabación. Usa la app de voz y luego la Opción B (form de n8n).');
-    return;
-  }
-  if (!chosenMime) {
-    alert('Formato de audio no soportado por este navegador. Prueba con Chrome (Android) o Safari actualizado (iOS).');
-    return;
-  }
+// ===== flujo =====
+btnRec.onclick = async () => {
+  const nombre   = pacienteEl.value.trim();
+  const telefono = telefonoEl.value.trim();
+
+  if (!nombre) { alert('Ingresa el nombre completo del paciente.'); pacienteEl.focus(); return; }
+  if (!validarTelefonoE164(telefono)) { alert('Teléfono inválido. Usa formato +502XXXXXXXX.'); telefonoEl.focus(); return; }
+  if (!navigator.mediaDevices?.getUserMedia) { alert('Tu navegador no soporta grabación.'); return; }
+  if (!chosenMime) { alert('Formato de audio no soportado.'); return; }
 
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     chunks = [];
     mediaRecorder = new MediaRecorder(stream, { mimeType: chosenMime });
-    mediaRecorder.ondataavailable = e => { if (e.data && e.data.size > 0) chunks.push(e.data); };
-    mediaRecorder.onstart = () => { estado.textContent = 'Grabando...'; };
+    mediaRecorder.ondataavailable = (e) => { if (e.data?.size > 0) chunks.push(e.data); };
+    mediaRecorder.onstart = () => { estado.textContent = `Grabando (Paciente #${idx})...`; };
+
     mediaRecorder.onstop = async () => {
       try {
         estado.textContent = 'Procesando...';
-
         const blob = new Blob(chunks, { type: chosenMime });
         const fileName = `receta_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.${fileExt}`;
         const file = new File([blob], fileName, { type: chosenMime });
 
         const fd = new FormData();
         fd.append('audio', file);
-        fd.append('paciente', pacienteEl.value.trim());
-        fd.append('telefono', telefonoEl.value.trim());
+        fd.append('paciente', nombre);
+        fd.append('telefono', telefono);
         fd.append('diagnostico', diagnosticoEl.value.trim());
 
         btnRec.disabled = true;
@@ -135,15 +151,16 @@ btnRec.onclick = async () => {
 
         const res = await fetch(WEBHOOK, { method: 'POST', body: fd });
         if (!res.ok) throw new Error('El servidor respondió con error');
-        let data = {};
-        try { data = await res.json(); } catch { /* puede no venir JSON */ }
 
         estado.textContent = 'Enviado ✅';
         msg.innerHTML = '<span class="ok">Listo. El audio se envió al sistema.</span>';
+
+        // 👉 reseteo para siguiente paciente
+        resetForNextPatient();
+
       } catch (e) {
         estado.textContent = 'Error al enviar';
-        msg.innerHTML = '<span class="err">' + (e.message || e) + '</span>';
-      } finally {
+        msg.innerHTML = `<span class="err">${e.message || e}</span>`;
         btnRec.disabled = false;
         btnStop.disabled = true;
       }
@@ -160,11 +177,16 @@ btnRec.onclick = async () => {
 };
 
 btnStop.onclick = () => {
-  if (mediaRecorder && mediaRecorder.state === 'recording') {
+  if (mediaRecorder?.state === 'recording') {
     mediaRecorder.stop();
     estado.textContent = 'Deteniendo...';
     btnStop.disabled = true;
   }
 };
+
+// Estado inicial
+if (!telefonoEl.value) telefonoEl.value = DEFAULT_CC;
+pacienteEl.focus();
 </script>
 </html>
+
