@@ -16,11 +16,13 @@
   .row > * { flex:1 }
   .pill { display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #ddd; background:#fff; font-size:13px; color:#444; }
   .muted { color:#666; font-size: 13px; }
-  .ok { color:#096; }
+  .ok { color:#096; font-weight: bold; }
   .err { color:#900; }
   .actions { display:flex; gap:10px; margin-top: 12px; flex-wrap:wrap; }
   .tip { font-size: 12px; color:#666; margin-top: 8px; }
-  #timer { font-weight: bold; margin-left: 10px; color:#333; }
+  #timer { font-weight: bold; margin-left: 10px; }
+  .recording { color: red; animation: blink 1s step-start infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
 </style>
 
 <div class="card">
@@ -108,6 +110,7 @@ pickMimeType();
 function startTimer() {
   seconds = 0;
   timerEl.textContent = "0:00";
+  timerEl.classList.add("recording");
   timer = setInterval(() => {
     seconds++;
     let m = Math.floor(seconds / 60);
@@ -115,7 +118,7 @@ function startTimer() {
     timerEl.textContent = `${m}:${s}`;
   }, 1000);
 }
-function stopTimer() { clearInterval(timer); }
+function stopTimer() { clearInterval(timer); timerEl.classList.remove("recording"); }
 function resetTimer() { stopTimer(); timerEl.textContent = ""; }
 
 function resetForNextPatient() {
@@ -126,7 +129,6 @@ function resetForNextPatient() {
   telefonoEl.value = DEFAULT_CC;
   diagnosticoEl.value = "";
   estado.textContent = "Listo para grabar";
-  msg.textContent = "";
   btnRec.disabled = false;
   btnStop.disabled = true;
   btnReset.disabled = true;
@@ -199,9 +201,11 @@ btnSend.onclick = async () => {
     fd.append("diagnostico", diagnosticoEl.value.trim());
     const res = await fetch(WEBHOOK, { method: "POST", body: fd });
     if (!res.ok) throw new Error("Error al enviar");
+    
     estado.textContent = "Enviado ✅";
-    msg.innerHTML = '<span class="ok">El audio se envió al sistema.</span>';
-    resetForNextPatient();
+    msg.innerHTML = '<span class="ok">✅ El audio se envió al sistema.</span>';
+
+    setTimeout(() => { resetForNextPatient(); }, 1500);
   } catch (e) {
     estado.textContent = "Error al enviar";
     msg.innerHTML = `<span class="err">${e.message || e}</span>`;
@@ -212,4 +216,5 @@ if (!telefonoEl.value) telefonoEl.value = DEFAULT_CC;
 pacienteEl.focus();
 </script>
 </html>
+
 
