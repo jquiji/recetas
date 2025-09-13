@@ -232,10 +232,15 @@ btnSend.onclick = async () => {
     const res = await fetch(WEBHOOK, { method: "POST", body: fd });
     if (!res.ok) throw new Error("Error al enviar");
 
-    estado.textContent = "Enviado ✅";
-    msg.innerHTML = '<span class="ok">✅ El audio se envió al sistema.</span>';
-
-    setTimeout(() => { resetForNextPatient(); }, 2000);
+    const data = await res.json(); // 👈 leemos respuesta de n8n
+    if (data.rxLink) {
+      estado.textContent = "Redirigiendo al editor...";
+      window.location.href = data.rxLink; // 👈 redirect automático
+    } else {
+      estado.textContent = "Enviado ✅ (sin link)";
+      msg.innerHTML = '<span class="ok">✅ El audio se envió al sistema.</span>';
+      setTimeout(() => { resetForNextPatient(); }, 2000);
+    }
   } catch (e) {
     estado.textContent = "Error al enviar";
     msg.innerHTML = `<span class="err">${e.message || e}</span>`;
