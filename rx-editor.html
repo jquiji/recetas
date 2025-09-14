@@ -38,17 +38,14 @@
   <footer>Editor de borrador de receta — MVP</footer>
 
   <script>
-    // =================== CONFIG: CAMBIA ESTAS URLS ===================
-    const N8N_GET_URL     = "https://nextgen-ai-jq.app.n8n.cloud/webhook/rx/get";
-    const N8N_SAVE_URL    = "https://nextgen-ai-jq.app.n8n.cloud/webhook/rx/save";
-    const N8N_APPROVE_URL = "https://nextgen-ai-jq.app.n8n.cloud/webhook/rx/approve";
-
-    // =================================================================
+    // =================== CONFIG ===================
+    const REPO_RAW_BASE = "https://raw.githubusercontent.com/jquiji/recetas/main/recetas";
+    // ==============================================
 
     // Leer parámetros de la URL
     const qs = new URLSearchParams(location.search);
-    const rxId = qs.get("rx");
-    const returnUrl = qs.get("return"); // opcional para volver a la página de grabación
+    const rxId = qs.get("rx"); // ej: rx_2025-09-14_00-29-53_nm9dru
+    const returnUrl = qs.get("return"); // opcional
 
     const rxMetaEl = document.getElementById("rxMeta");
     const statusEl = document.getElementById("status");
@@ -68,29 +65,30 @@
       toolbar: "undo redo | bold italic underline | bullist numlist | link table | alignleft aligncenter alignright | code",
       setup: (editor) => {
         editor.on("init", async () => {
-          await cargarHTML();
+          await cargarJSON();
         });
       }
     });
 
-    async function cargarHTML() {
+    async function cargarJSON() {
       try {
         rxMetaEl.textContent = `Receta: ${rxId} · cargando…`;
-        const url = `${N8N_GET_URL}?rxId=${encodeURIComponent(rxId)}`;
-        const res = await fetch(url, { method: "GET" });
-        if (!res.ok) throw new Error("No se pudo cargar la receta.");
+        const url = `${REPO_RAW_BASE}/${rxId}.json`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("No se pudo cargar el JSON.");
         const data = await res.json();
 
-        tinymce.get("editor").setContent(data.html || "<p>(Vacío)</p>");
-        const partes = [];
-        partes.push(`Receta: ${rxId}`);
-        if (data.paciente) partes.push(`Paciente: ${data.paciente}`);
-        if (data.ultimaVersion) partes.push(`v: ${data.ultimaVersion}`);
-        if (data.estado) partes.push(`Estado: ${data.estado}`);
-        rxMetaEl.textContent = partes.join(" · ");
+        // Convertir pasos a texto plano
+        let texto = "";
+        if (data.steps && Array.isArray(data.steps)) {
+          texto = data.steps.map(s => `${s.n}. ${s.texto}`).join("<br>");
+        }
+
+        tinymce.get("editor").setContent(texto || "<p>(Vacío)</p>");
+        rxMetaEl.textContent = `Receta: ${rxId} · lista`;
       } catch (err) {
         console.error(err);
-        alert("Error cargando HTML: " + err.message);
+        alert("Error cargando JSON: " + err.message);
       }
     }
 
@@ -101,48 +99,17 @@
     }
 
     btnGuardar.addEventListener("click", async () => {
-      try {
-        const html = tinymce.get("editor").getContent();
-        const res = await fetch(N8N_SAVE_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ rxId, html })
-        });
-        if (!res.ok) throw new Error("No se pudo guardar.");
-        const data = await res.json();
-        flash("Cambios guardados" + (data.version ? ` (v ${data.version})` : ""));
-      } catch (err) {
-        console.error(err);
-        alert("Error guardando: " + err.message);
-      }
+      flash("👉 (Demo) Aquí luego mandamos a N8N con la receta editada");
     });
 
     btnAprobar.addEventListener("click", async () => {
-      if (!confirm("¿Aprobar receta? Ya no se podrá editar sin crear nueva versión.")) return;
-      try {
-        // (opcional) guardar antes de aprobar
-        await btnGuardar.click();
-
-        const res = await fetch(N8N_APPROVE_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ rxId })
-        });
-        if (!res.ok) throw new Error("No se pudo aprobar.");
-        const data = await res.json();
-
-        // Redirigir de regreso si hay return=...
-        const target = returnUrl ? decodeURIComponent(returnUrl) : null;
-        if (target) {
-          location.href = target;
-        } else {
-          flash("Receta aprobada ✔");
-        }
-      } catch (err) {
-        console.error(err);
-        alert("Error aprobando: " + err.message);
+      if (!confirm("¿Aprobar receta?")) return;
+      flash("👉 (Demo) Aquí luego mandamos a N8N para generar el PDF y enviar");
+      if (returnUrl) {
+        setTimeout(() => location.href = decodeURIComponent(returnUrl), 1500);
       }
     });
   </script>
 </body>
 </html>
+
