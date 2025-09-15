@@ -1,0 +1,12 @@
+{
+  "rxId": "rx_2025-09-15_03-02-02_k1fz21",
+  "paciente": "ANA-KLUSSMANN",
+  "telefono": "50223423423",
+  "diagnostico": "ACNE",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Ibuprofeno: Utilizar 600 mg cada 8 horas durante 15 días"
+    }
+  ]
+}
