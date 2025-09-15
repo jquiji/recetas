@@ -1,0 +1,24 @@
+{
+  "rxId": "rx_2025-09-15_19-52-54_ihjuu6",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "diagnostico": "Psoriasis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Metotrexato: Tomar 6 tabletas el día domingo"
+    },
+    {
+      "n": 2,
+      "texto": "Ácido fólico: Tomar una tableta todos los días excepto el día domingo"
+    },
+    {
+      "n": 3,
+      "texto": "Fórmula magistral, crema blanca: Aplicar en placas en la mañana y en la noche. Composición: Urea 20%, ácido salicílico 3%, cold cream 88%"
+    },
+    {
+      "n": 4,
+      "texto": "Betasol espuma: Aplicar en cabeza y hacer masaje por 5 minutos en la mañana y en la noche"
+    }
+  ]
+}
