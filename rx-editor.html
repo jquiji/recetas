@@ -110,10 +110,12 @@
       try {
         const html = tinymce.get("editor").getContent();
 
-        // Extraer campos con regex
-        const paciente = (html.match(/Paciente:<\/strong>\s*([^<]+)/i) || [,""])[1].trim();
-        const telefono = (html.match(/Tel[ée]fono:<\/strong>\s*([^<]+)/i) || [,""])[1].trim();
-        const diagnostico = (html.match(/Diagn[óo]stico:<\/strong>\s*([^<]+)/i) || [,""])[1].trim();
+        
+       // Extraer campos con regex más robusto
+        const paciente = (html.match(/Paciente:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+        const telefono = (html.match(/Tel[ée]fono:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+        const diagnostico = (html.match(/Diagn[óo]stico:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+
 
         // Extraer pasos de <li>
         const pasos = Array.from(html.matchAll(/<li>(.*?)<\/li>/gi)).map(m => m[1].trim());
