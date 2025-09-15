@@ -1,0 +1,32 @@
+{
+  "rxId": "rx_2025-09-15_19-44-24_1i5rfa",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "E-Writing Cleanser to Foam (CeraVe): Usar en el lavado de rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "AgniVent Repair Dissolving: Usar en rostro en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Eloquer Mineral Tolerance Fluid (Cantabria): Usar en rostro cada 4 horas. Por ejemplo, a 7 de la mañana, 11 de la mañana y 2 pm"
+    },
+    {
+      "n": 4,
+      "texto": "Retin-A 0.25: Usar en rostro por las noches"
+    },
+    {
+      "n": 5,
+      "texto": "Vivitar 100 mg: Tomar una tableta después del desayuno"
+    },
+    {
+      "n": 6,
+      "texto": "Isofax 20 mg: Tomar 2 pastillas día lunes, miércoles, viernes y domingo. Y tomar una pastilla día martes, jueves y sábado"
+    }
+  ]
+}
