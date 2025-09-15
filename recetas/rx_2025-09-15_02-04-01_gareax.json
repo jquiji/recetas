@@ -1,0 +1,12 @@
+{
+  "rxId": "rx_2025-09-15_02-04-01_gareax",
+  "paciente": "ANA-MUNOZ",
+  "telefono": "50212234311",
+  "diagnostico": "PELO",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Ibuprofeno: Usar 600 mg una vez al día"
+    }
+  ]
+}
