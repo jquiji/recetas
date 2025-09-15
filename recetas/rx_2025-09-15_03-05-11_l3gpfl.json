@@ -1,0 +1,28 @@
+{
+  "rxId": "rx_2025-09-15_03-05-11_l3gpfl",
+  "paciente": "Martin-Klussmann",
+  "telefono": "50230224593",
+  "diagnostico": "ACNE",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Norma Elfito Solution Dermolimpiador: Usar en el lavado de rostro mañana y noche"
+    },
+    {
+      "n": 2,
+      "texto": "Cleanance Comedomed Serum (Avène): Usar en rostro por las mañanas"
+    },
+    {
+      "n": 3,
+      "texto": "Sébium Hydra (Bioderma): Utilizar en rostro mañana y noche"
+    },
+    {
+      "n": 4,
+      "texto": "Photo Age Repair (ISDIN): Aplicar en rostro cada 4 horas"
+    },
+    {
+      "n": 5,
+      "texto": "Vivitar 100 mg: Tomar una pastilla por las mañanas"
+    }
+  ]
+}
