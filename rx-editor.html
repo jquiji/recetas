@@ -14,7 +14,6 @@
     .pill { font-size: 12px; background:#f3f4f6; border-radius:999px; padding:6px 10px; }
     button { border:0; border-radius:10px; padding:10px 14px; cursor:pointer; }
     .btn { background:#111827; color:#fff; }
-    .btn.sec { background:#e5e7eb; color:#111827; }
     #status { font-size:13px; color:#111827; margin-top:8px; }
     .hidden { display:none; }
     footer { color:#6b7280; font-size:12px; text-align:center; padding:24px 0 40px; }
@@ -25,8 +24,7 @@
     <div class="wrap row">
       <div id="rxMeta" class="pill">Cargando receta…</div>
       <div style="flex:1"></div>
-      <button id="btnGuardar" class="btn">Guardar</button>
-      <button id="btnAprobar" class="btn sec">Aprobar</button>
+      <button id="btnAprobar" class="btn">Aprobar</button>
     </div>
   </header>
 
@@ -39,18 +37,16 @@
 
   <script>
     // =================== CONFIG ===================
-    const N8N_SAVE_URL    = "https://nextgen-ai-jq.app.n8n.cloud/webhook/rx/save";
     const N8N_APPROVE_URL = "https://nextgen-ai-jq.app.n8n.cloud/webhook/rx/approve";
     // ===============================================
 
     // Leer parámetros de la URL
     const qs = new URLSearchParams(location.search);
     const rxId = qs.get("rx");
-    const returnUrl = qs.get("return"); // opcional para volver a la página de grabación
+    const returnUrl = qs.get("return"); // opcional
 
     const rxMetaEl = document.getElementById("rxMeta");
     const statusEl = document.getElementById("status");
-    const btnGuardar = document.getElementById("btnGuardar");
     const btnAprobar = document.getElementById("btnAprobar");
 
     if (!rxId) {
@@ -71,7 +67,7 @@
       }
     });
 
-    // === Cargar JSON desde GitHub y convertirlo en HTML editable ===
+    // === Cargar JSON desde GitHub y mostrarlo en TinyMCE ===
     async function cargarJSON() {
       try {
         rxMetaEl.textContent = `Receta: ${rxId} · cargando…`;
@@ -81,23 +77,21 @@
         if (!res.ok) throw new Error("No se pudo cargar la receta.");
         const data = await res.json();
 
-        // Construir contenido inicial del editor con paciente, telefono, diagnostico y pasos
-let html = `
-  <p><strong>Paciente:</strong> ${data.paciente || ""}</p>
-  <p><strong>Teléfono:</strong> ${data.telefono || ""}</p>
-  <p><strong>Diagnóstico:</strong> ${data.diagnostico || ""}</p>
-  <hr>
-  <ol>
-`;
+        // Construir contenido inicial
+        let html = `
+          <p><strong>Paciente:</strong> ${data.paciente || ""}</p>
+          <p><strong>Teléfono:</strong> ${data.telefono || ""}</p>
+          <p><strong>Diagnóstico:</strong> ${data.diagnostico || ""}</p>
+          <hr>
+          <ol>
+        `;
+        (data.pasos || data.steps || []).forEach(s => {
+          html += `<li>${s.texto}</li>`;
+        });
+        html += "</ol>";
 
-(data.pasos || data.steps || []).forEach(s => {
-  html += `<li>${s.texto}</li>`;
-});
-
-html += "</ol>";
-
-tinymce.get("editor").setContent(html);
-rxMetaEl.textContent = `Receta: ${rxId} · lista`;
+        tinymce.get("editor").setContent(html);
+        rxMetaEl.textContent = `Receta: ${rxId} · lista`;
       } catch (err) {
         console.error(err);
         alert("Error cargando receta: " + err.message);
@@ -110,36 +104,21 @@ rxMetaEl.textContent = `Receta: ${rxId} · lista`;
       setTimeout(() => statusEl.classList.add("hidden"), 2200);
     }
 
-    // === Guardar cambios ===
-    btnGuardar.addEventListener("click", async () => {
+    // === Aprobar (enviar a N8N) ===
+    btnAprobar.addEventListener("click", async () => {
+      if (!confirm("¿Aprobar receta? Ya no se podrá editar sin crear nueva versión.")) return;
       try {
         const html = tinymce.get("editor").getContent();
-        const res = await fetch(N8N_SAVE_URL, {
+
+        const res = await fetch(N8N_APPROVE_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ rxId, html })
         });
-        if (!res.ok) throw new Error("No se pudo guardar.");
-        const data = await res.json();
-        flash("Cambios guardados" + (data.version ? ` (v ${data.version})` : ""));
-      } catch (err) {
-        console.error(err);
-        alert("Error guardando: " + err.message);
-      }
-    });
 
-    // === Aprobar ===
-    btnAprobar.addEventListener("click", async () => {
-      if (!confirm("¿Aprobar receta? Ya no se podrá editar sin crear nueva versión.")) return;
-      try {
-        await btnGuardar.click();
-        const res = await fetch(N8N_APPROVE_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ rxId })
-        });
         if (!res.ok) throw new Error("No se pudo aprobar.");
         const data = await res.json();
+
         const target = returnUrl ? decodeURIComponent(returnUrl) : null;
         if (target) {
           location.href = target;
@@ -154,3 +133,4 @@ rxMetaEl.textContent = `Receta: ${rxId} · lista`;
   </script>
 </body>
 </html>
+
