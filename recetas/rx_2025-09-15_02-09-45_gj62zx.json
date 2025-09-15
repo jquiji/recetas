@@ -1,0 +1,12 @@
+{
+  "rxId": "rx_2025-09-15_02-09-45_gj62zx",
+  "paciente": "ANA-MUNOZ",
+  "telefono": "50230224594",
+  "diagnostico": "ACNE",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Ibuprofeno: Tomar 600 mg una vez al día"
+    }
+  ]
+}
