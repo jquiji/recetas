@@ -81,15 +81,23 @@
         if (!res.ok) throw new Error("No se pudo cargar la receta.");
         const data = await res.json();
 
-        // Pasos → lista ordenada
-        let html = "<ol>";
-        (data.steps || []).forEach(s => {
-          html += `<li>${s.texto}</li>`;
-        });
-        html += "</ol>";
+        // Construir contenido inicial del editor con paciente, telefono, diagnostico y pasos
+let html = `
+  <p><strong>Paciente:</strong> ${data.paciente || ""}</p>
+  <p><strong>Teléfono:</strong> ${data.telefono || ""}</p>
+  <p><strong>Diagnóstico:</strong> ${data.diagnostico || ""}</p>
+  <hr>
+  <ol>
+`;
 
-        tinymce.get("editor").setContent(html);
-        rxMetaEl.textContent = `Receta: ${rxId} · lista`;
+(data.pasos || data.steps || []).forEach(s => {
+  html += `<li>${s.texto}</li>`;
+});
+
+html += "</ol>";
+
+tinymce.get("editor").setContent(html);
+rxMetaEl.textContent = `Receta: ${rxId} · lista`;
       } catch (err) {
         console.error(err);
         alert("Error cargando receta: " + err.message);
