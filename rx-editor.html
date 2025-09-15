@@ -111,10 +111,11 @@
         // 1. Obtener HTML del editor
         let html = tinymce.get("editor").getContent();
 
-        // 2. Decodificar entidades HTML (&eacute; -> é, &ocirc; -> ô, etc.)
+        // 2. Decodificar entidades HTML pero mantener etiquetas
         function decodeHtmlEntities(str) {
-          const txt = new DOMParser().parseFromString(str, "text/html");
-          return txt.documentElement.textContent;
+          const txt = document.createElement("textarea");
+          txt.innerHTML = str;
+          return txt.value;
         }
         html = decodeHtmlEntities(html);
 
