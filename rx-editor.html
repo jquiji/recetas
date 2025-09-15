@@ -38,12 +38,12 @@
   <script>
     // =================== CONFIG ===================
     const N8N_APPROVE_URL = "https://nextgen-ai-jq.app.n8n.cloud/webhook/rx/approve";
+    const REDIRECT_URL = "https://jquiji.github.io/recetas/recetas.html";
     // ===============================================
 
     // Leer parámetros de la URL
     const qs = new URLSearchParams(location.search);
     const rxId = qs.get("rx");
-    const returnUrl = qs.get("return"); // opcional
 
     const rxMetaEl = document.getElementById("rxMeta");
     const statusEl = document.getElementById("status");
@@ -132,14 +132,13 @@
         });
 
         if (!res.ok) throw new Error("No se pudo aprobar.");
-        const data = await res.json();
 
-        const target = returnUrl ? decodeURIComponent(returnUrl) : null;
-        if (target) {
-          location.href = target;
-        } else {
-          flash("Receta aprobada ✔");
-        }
+        // Mostrar mensaje y redirigir
+        flash("✅ Receta aprobada correctamente");
+        setTimeout(() => {
+          window.location.href = REDIRECT_URL;
+        }, 2500);
+
       } catch (err) {
         console.error(err);
         alert("Error aprobando: " + err.message);
