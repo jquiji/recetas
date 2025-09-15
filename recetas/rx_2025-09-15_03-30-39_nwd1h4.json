@@ -1,0 +1,12 @@
+{
+  "rxId": "rx_2025-09-15_03-30-39_nwd1h4",
+  "paciente": "Ana-Munoz",
+  "telefono": "50212312312",
+  "diagnostico": "ACNE",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Ibuprofeno: Utilizar de 600 miligramos"
+    }
+  ]
+}
