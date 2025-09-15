@@ -1,0 +1,32 @@
+{
+  "rxId": "rx_2025-09-15_02-12-20_t9nyfb",
+  "paciente": "Jose-quijivix",
+  "telefono": "50230224593",
+  "diagnostico": "acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Acniben Repair (ISDIN): Usar en el lavado de rostro a la mañana y a la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Teen Derm Hydra (ISISPHARMA): Aplicar en rostro mañana y noche"
+    },
+    {
+      "n": 3,
+      "texto": "Ruboril Expert M (ISISPHARMA): Aplicar en rostro mañana y noche"
+    },
+    {
+      "n": 4,
+      "texto": "Heliocare Mineral Tolerance Fluid (Cantabria Labs): Usar en rostro cada 4 horas"
+    },
+    {
+      "n": 5,
+      "texto": "Vivitar 100 mg: Tomar una tableta después del desayuno hasta nueva orden"
+    },
+    {
+      "n": 6,
+      "texto": "Isoface 20 mg: Tomar una tableta después del almuerzo por 6 meses"
+    }
+  ]
+}
