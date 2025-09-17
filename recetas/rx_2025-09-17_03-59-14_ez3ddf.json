@@ -1,0 +1,20 @@
+{
+  "rxId": "rx_2025-09-17_03-59-14_ez3ddf",
+  "paciente": "Jose-Quijivic",
+  "telefono": "50230224593",
+  "diagnostico": "Alopecia androgenica",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Dutaflux 0.5 mg: Tomar una tableta después de la cena"
+    },
+    {
+      "n": 2,
+      "texto": "Minox 5 mg: Tomar una tableta después de la cena"
+    },
+    {
+      "n": 3,
+      "texto": "Folipil loción al 5%: Aplicar un mL en áreas afectadas y hacer masaje por 5 minutos en la mañana y en la noche"
+    }
+  ]
+}
