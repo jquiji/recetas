@@ -1,0 +1,20 @@
+{
+  "rxId": "rx_2025-09-17_04-33-35_gpurwq",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Minoxidil: Utilizar 5 mg una vez al día"
+    },
+    {
+      "n": 2,
+      "texto": "Dutasteride: Utilizar 0.05 una vez al día durante 30 días"
+    },
+    {
+      "n": 3,
+      "texto": "Fusion Water (ISDIN): Utilizar cada 4 horas"
+    }
+  ]
+}
