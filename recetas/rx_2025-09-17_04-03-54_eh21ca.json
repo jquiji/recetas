@@ -1,0 +1,28 @@
+{
+  "rxId": "rx_2025-09-17_04-03-54_eh21ca",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Effaclar Gel (La Roche-Posay): Lavar el rostro en la mañana y en la noche, hacer espuma durante 30 segundos y retirar con agua"
+    },
+    {
+      "n": 2,
+      "texto": "Normaderm Phytosolution Gel Tratamiento (Vichy): Aplicar en rostro por las mañanas"
+    },
+    {
+      "n": 3,
+      "texto": "Thin Derm Hydra: Usar en rostro mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "Fusion Water (ISDIN): Usar en rostro cada 4 horas, por ejemplo, 7 de la mañana, 11 de la mañana y 2 pm"
+    },
+    {
+      "n": 5,
+      "texto": "Retin-A 0.025%: Aplicar en rostro una capa fina por las noches"
+    }
+  ]
+}
