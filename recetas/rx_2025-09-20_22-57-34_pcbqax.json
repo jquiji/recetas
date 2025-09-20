@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-09-20_22-57-34_pcbqax",
+  "paciente": "FERNANDO-MUNOZ",
+  "telefono": "50230224593",
+  "email": "gastos.appgt@gmail.com",
+  "diagnostico": "ALOPECIA ANDROGENICA",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Fusion Water (ISDIN): Aplicar en rostro 3 veces al día, cada 4 horas. Ejemplos: 7am, 11am, 2pm"
+    },
+    {
+      "n": 2,
+      "texto": "Minoxidil: Utilizar 5mg una vez al día durante 30 días"
+    },
+    {
+      "n": 3,
+      "texto": "Dutasteride: Utilizar 0.5mg 3 veces a la semana. Ejemplos: lunes, miércoles y viernes"
+    }
+  ]
+}
