@@ -121,9 +121,11 @@
         html = decodeHtmlEntities(html);
 
         // 3. Extraer campos
-        const paciente = (html.match(/Paciente:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
-        const telefono = (html.match(/Tel[ée]fono:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
-        const diagnostico = (html.match(/Diagn[óo]stico:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+      const paciente = (html.match(/Paciente:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+      const telefono = (html.match(/Tel[ée]fono:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+      const email = (html.match(/Email:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+      const diagnostico = (html.match(/Diagn[óo]stico:<\/strong>\s*([^<]+)<\/p>/i) || [,""])[1].trim();
+
 
         // 4. Extraer pasos de <li>
         const pasos = Array.from(html.matchAll(/<li>(.*?)<\/li>/gi)).map(m => m[1].trim());
@@ -136,6 +138,7 @@
             rxId,
             paciente,
             telefono,
+            email,
             diagnostico,
             pasos
           })
