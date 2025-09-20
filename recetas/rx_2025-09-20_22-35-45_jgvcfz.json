@@ -1,0 +1,20 @@
+{
+  "rxId": "rx_2025-09-20_22-35-45_jgvcfz",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "diagnostico": "ACNE",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Minoxidil: Utilizar"
+    },
+    {
+      "n": 2,
+      "texto": "Dutasteride: Utilizar"
+    },
+    {
+      "n": 3,
+      "texto": "Steam Fusion 1: Utilizar como bloqueador solar"
+    }
+  ]
+}
