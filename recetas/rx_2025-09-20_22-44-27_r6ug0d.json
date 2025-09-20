@@ -1,0 +1,16 @@
+{
+  "rxId": "rx_2025-09-20_22-44-27_r6ug0d",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "diagnostico": "ACNE",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Bloqueador solar: Utilizar"
+    },
+    {
+      "n": 2,
+      "texto": "Minoxidil: Utilizar"
+    }
+  ]
+}
