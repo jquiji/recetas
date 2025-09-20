@@ -28,7 +28,7 @@
 
 <div class="card">
   <h2>Grabadora de Recetas</h2>
-  <p class="help">Graba la receta y envíala al sistema. Capturamos <b>Nombre</b>, <b>Apellido</b>, <b>Teléfono</b> y el <b>Audio</b>.</p>
+  <p class="help">Graba la receta y envíala al sistema. Capturamos <b>Nombre</b>, <b>Apellido</b>, <b>Correo</b>, <b>Teléfono</b> y el <b>Audio</b>.</p>
 
   <div class="row" style="align-items:center; margin:6px 0 10px">
     <span id="pacienteIdx" class="pill">Paciente #1</span>
@@ -48,6 +48,9 @@
       <input id="apellido" placeholder="Ej: Quijivix" required />
     </div>
   </div>
+
+  <label>Correo electrónico</label>
+  <input id="email" type="email" placeholder="ejemplo@correo.com" required />
 
   <label>Teléfono</label>
   <div class="row">
@@ -80,6 +83,7 @@ const WEBHOOK = "https://nextgen-ai-jq.app.n8n.cloud/webhook/recetas-audio";
 const $ = (id) => document.getElementById(id);
 const nombreEl = $('nombre');
 const apellidoEl = $('apellido');
+const emailEl = $('email');
 const codigoEl = $('codigo');
 const telefonoEl = $('telefono');
 const diagnosticoEl = $('diagnostico');
@@ -101,8 +105,8 @@ let audioFile = null;
 let timer, seconds = 0;
 
 // ---- Teléfono con guion automático ----
-telefonoEl.addEventListener("input", (e) => {
-  let val = telefonoEl.value.replace(/\D/g, ""); // solo números
+telefonoEl.addEventListener("input", () => {
+  let val = telefonoEl.value.replace(/\D/g, "");
   if (val.length > 4) {
     telefonoEl.value = val.slice(0,4) + "-" + val.slice(4,8);
   } else {
@@ -132,6 +136,7 @@ function resetForNextPatient() {
   pacienteIdx.textContent = `Paciente #${idx}`;
   nombreEl.value = "";
   apellidoEl.value = "";
+  emailEl.value = "";
   codigoEl.value = "+502";
   telefonoEl.value = "";
   diagnosticoEl.value = "";
@@ -167,9 +172,11 @@ pickMimeType();
 btnRec.onclick = async () => {
   const nombre = nombreEl.value.trim();
   const apellido = apellidoEl.value.trim();
-  const telefono = telefonoEl.value.replace(/\D/g, ""); // limpiar guion
+  const email = emailEl.value.trim();
+  const telefono = telefonoEl.value.replace(/\D/g, "");
 
   if (!nombre || !apellido) { alert("Ingresa nombre y apellido."); return; }
+  if (!email) { alert("Ingresa un correo electrónico válido."); return; }
   if (telefono.length !== 8) { alert("El teléfono debe tener 8 dígitos."); return; }
 
   if (!navigator.mediaDevices?.getUserMedia) { alert("Tu navegador no soporta grabación."); return; }
@@ -226,16 +233,17 @@ btnSend.onclick = async () => {
     const fd = new FormData();
     fd.append("audio", audioFile);
     fd.append("paciente", nombreEl.value.trim() + " " + apellidoEl.value.trim());
+    fd.append("email", emailEl.value.trim());   // 👈 nuevo campo
     fd.append("telefono", codigoEl.value.trim() + telefonoEl.value.replace(/\D/g,""));
     fd.append("diagnostico", diagnosticoEl.value.trim());
 
     const res = await fetch(WEBHOOK, { method: "POST", body: fd });
     if (!res.ok) throw new Error("Error al enviar");
 
-    const data = await res.json(); // 👈 leemos respuesta de n8n
+    const data = await res.json();
     if (data.rxLink) {
       estado.textContent = "Redirigiendo al editor...";
-      window.location.href = data.rxLink; // 👈 redirect automático
+      window.location.href = data.rxLink;
     } else {
       estado.textContent = "Enviado ✅ (sin link)";
       msg.innerHTML = '<span class="ok">✅ El audio se envió al sistema.</span>';
