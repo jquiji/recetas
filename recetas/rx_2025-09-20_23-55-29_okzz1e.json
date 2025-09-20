@@ -1,0 +1,33 @@
+{
+  "rxId": "rx_2025-09-20_23-55-29_okzz1e",
+  "paciente": "jose-quijivix",
+  "telefono": "50230224593",
+  "email": "kgkg.kluss@gmail.com",
+  "diagnostico": "acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Cleanse Gel de Avena: Utilizar para lavado del rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Thermopur Triple Effect Serum (Eucerin): Aplicar en rostro por las mañanas"
+    },
+    {
+      "n": 3,
+      "texto": "Teen Derm Hydra (ISISPHARMA): Aplicar en rostro mañana y noche"
+    },
+    {
+      "n": 4,
+      "texto": "Fusion Water SPF 50 (ISDIN): Aplicar en rostro cada dos horas"
+    },
+    {
+      "n": 5,
+      "texto": "Retin-A 0.025%: Aplicar capa fina por las noches"
+    },
+    {
+      "n": 6,
+      "texto": "Minot 100 mg: Tomar una tableta después del almuerzo por 3 meses"
+    }
+  ]
+}
