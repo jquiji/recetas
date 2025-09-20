@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2025-09-20_22-48-04_dv9kux",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "email": "jose.quiji@gmail.com",
+  "diagnostico": "ACNE",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Minoxidil 5 mg: Utilizar una vez al día durante 30 días"
+    },
+    {
+      "n": 2,
+      "texto": "Dutas de 0.5 mg: Utilizar 3 veces a la semana, lunes, miércoles y viernes"
+    }
+  ]
+}
