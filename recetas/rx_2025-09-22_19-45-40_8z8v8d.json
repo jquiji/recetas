@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-09-22_19-45-40_8z8v8d",
+  "paciente": "Adriana-Rodriguez",
+  "telefono": "50237694329",
+  "email": "radriana296@gmail.com",
+  "diagnostico": "acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Acniben Repair (ISDIN): Utilizar durante el lavado del rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Team Derm Hydra: Aplicar en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Fusion Water (ISDIN): Aplicar en el rostro cada 4 horas"
+    }
+  ]
+}
