@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-09-22_00-58-48_twarvk",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "email": "jose.quiji@gmail.com",
+  "diagnostico": "Alopecia",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Acniben Repair (ISDIN): Usar durante el lavado del rostro mañana y noche"
+    },
+    {
+      "n": 2,
+      "texto": "Tinderm Hydra: Usar en rostro en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Fusion Water (ISDIN): Aplicar en rostro cada 4 horas"
+    }
+  ]
+}
