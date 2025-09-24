@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-09-24_00-47-05_47xg8o",
+  "paciente": "Osacr-Sequeira",
+  "telefono": "50255237989",
+  "email": "clausequeira68@hotmail.com",
+  "diagnostico": "Queratosis seborreicas",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Eryfotona (ISDIN): Utilizar en rostro cada 4 horas. Ejemplos 7 de la mañana, 11 de la mañana y 2 p.m."
+    },
+    {
+      "n": 2,
+      "texto": "pH5 Advanced Repair (Eucerin): Utilizar de cuello a pies en la mañana y a la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Betasol espuma 0.05%: Aplicar en área de irritación de pierna en la mañana y la noche por dos semanas"
+    }
+  ]
+}
