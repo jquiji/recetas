@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2025-09-25_20-51-27_ufcr2a",
+  "paciente": "Daniela-Arreaza",
+  "telefono": "50240636660",
+  "email": "danielaarreza02@gmail.com",
+  "diagnostico": "Acné",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Isoface: Tomar dos tabletas después del almuerzo por un mes"
+    },
+    {
+      "n": 2,
+      "texto": "Acniben Repair (ISDIN): Aplicar durante el lavado del rostro en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Acniben Repair Gel Crema (ISDIN): Aplicar en rostro mañana y noche"
+    },
+    {
+      "n": 4,
+      "texto": "Fusion Water (ISDIN): Aplicar en rostro cada cuatro horas, por ejemplo, siete de la mañana, once de la mañana y dos p.m."
+    },
+    {
+      "n": 5,
+      "texto": "Aquaphor (Eucerin): Aplicar en labios a demanda"
+    }
+  ]
+}
