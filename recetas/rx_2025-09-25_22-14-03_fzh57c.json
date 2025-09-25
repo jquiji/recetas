@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2025-09-25_22-14-03_fzh57c",
+  "paciente": "Ian-Gonzalez",
+  "telefono": "50251425398",
+  "email": "gonzalezcho@outlook.com",
+  "diagnostico": "Eccema",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Jabón de Aceite (Babé): Utilizar durante el lavado de baño diario"
+    },
+    {
+      "n": 2,
+      "texto": "CeraVe en tarro: Aplicar en todo el cuerpo después del baño y a las seis de la tarde"
+    },
+    {
+      "n": 3,
+      "texto": "Lipikar Baume AP+M (La Roche-Posay): Aplicar en todo el cuerpo a mediodía y antes de dormir"
+    },
+    {
+      "n": 4,
+      "texto": "Rupatadina jarabe: Tomar 5 ml cada 12 horas por un mes"
+    }
+  ]
+}
