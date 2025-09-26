@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-09-26_21-45-37_dcl0x3",
+  "paciente": "Mariana-Alejandra-Rodas",
+  "telefono": "50259891556",
+  "email": "rodasmariana1@gmail.com",
+  "diagnostico": "Cicatrices queloides",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "BibitAR 100 mg: Tomar una tableta y media después del desayuno hasta nueva orden"
+    },
+    {
+      "n": 2,
+      "texto": "Dermatix Ultra Gel: Aplicar capa fina en cicatrices en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Cicaplast Baume B5: Aplicar en áreas cortadas el día de hoy en la mañana, tarde y noche hasta reparar"
+    }
+  ]
+}
