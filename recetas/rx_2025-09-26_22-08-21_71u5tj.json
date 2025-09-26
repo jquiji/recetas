@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2025-09-26_22-08-21_71u5tj",
+  "paciente": "Karen-Higueros",
+  "telefono": "50251823098",
+  "email": "karenhigueros1@gmail.com",
+  "diagnostico": "Acné mujer adulta",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Vivitar 100 mg: Tomar una tableta y media después del desayuno hasta nuevo orden"
+    },
+    {
+      "n": 2,
+      "texto": "Antipigment Corporal: Primera semana aplicar capa fina en noches alternas. Segunda semana, si hay tolerancia, utilizar todas las noches"
+    }
+  ]
+}
