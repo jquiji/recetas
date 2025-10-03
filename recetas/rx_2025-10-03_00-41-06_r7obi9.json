@@ -1,0 +1,33 @@
+{
+  "rxId": "rx_2025-10-03_00-41-06_r7obi9",
+  "paciente": "Claudia-Alfonso",
+  "telefono": "50259231006",
+  "email": "claudia.alfonsos@gmail.com",
+  "diagnostico": "Rutina de piel",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Cevit 5 Serum: Aplicar 3 a 4 gotas por las mañanas"
+    },
+    {
+      "n": 2,
+      "texto": "Hyaluronic Concentrate Serum: Aplicar capa fina en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Mineral 89 Crema: Aplicar en el rostro mañana y noche"
+    },
+    {
+      "n": 4,
+      "texto": "Protector Solar: Aplicar en el rostro cada 4 horas"
+    },
+    {
+      "n": 5,
+      "texto": "Reti-Age Crema: Aplicar capa fina por las noches, de lunes a viernes"
+    },
+    {
+      "n": 6,
+      "texto": "Glycoisdin 8: Aplicar capa fina por las noches, día sábado y domingo. Primera semana únicamente día sábado y segunda semana utilizar sábado y domingo"
+    }
+  ]
+}
