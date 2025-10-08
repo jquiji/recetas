@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-10-08_18-33-53_ayi2eh",
+  "paciente": "Francia-Madrid",
+  "telefono": "50259723272",
+  "email": "fmmadridbaide@gmail.com",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Aplicar en el rostro mañana y noche"
+    },
+    {
+      "n": 2,
+      "texto": "Aplicar en el rostro cada cuatro horas"
+    },
+    {
+      "n": 3,
+      "texto": "Aplicar capa fina por las noches"
+    }
+  ]
+}
