@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2025-10-16_04-59-40_qqwaje",
+  "paciente": "SEBASTIAN-Toralla",
+  "telefono": "50230817321",
+  "email": "majopolanco95@gmail.com",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Acniben Repair (ISDIN): Lavar el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Fusion Water MAGIC (ISDIN): Aplicar en el rostro cada 4 horas"
+    }
+  ]
+}
