@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2025-10-16_18-44-47_meyzps",
+  "paciente": "Ana-Munoz",
+  "telefono": "50248061417",
+  "email": "jose.quiji@gmail.com",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Glicoistin 25 Intense Gel: Utilizar en las mañanas y en las noches"
+    },
+    {
+      "n": 2,
+      "texto": "UV Block SPF 50 Dry Touch Light: Utilizar como bloqueador solar"
+    },
+    {
+      "n": 3,
+      "texto": "Tin Derm Pure: Utilizar en las noches"
+    },
+    {
+      "n": 4,
+      "texto": "Acniben Repair Gel Crema: Utilizar por las mañanas durante un mes"
+    }
+  ]
+}
