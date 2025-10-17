@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-10-17_01-35-17_oxwctz",
+  "paciente": "Edna-Galindo",
+  "telefono": "50255147680",
+  "email": "ednamgram@gmail.com",
+  "diagnostico": "Acrocordones",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Cicaplast Baume B5 (La Roche-Posay): Aplicar en cada lesión de acrocordón en la mañana, tarde y noche hasta reparar"
+    },
+    {
+      "n": 2,
+      "texto": "Anti-Pigment Corporal (Eucerin): Aplicar capa fina en áreas de hiperpigmentación por las mañanas"
+    },
+    {
+      "n": 3,
+      "texto": "Glicolic 10%: Aplicar según tolerancia por las noches, día lunes, miércoles y viernes"
+    }
+  ]
+}
