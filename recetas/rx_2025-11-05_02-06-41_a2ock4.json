@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2025-11-05_02-06-41_a2ock4",
+  "paciente": "Jose-Luis-Monzon",
+  "telefono": "50242173516",
+  "email": "jmonzon@hpc.com.gt",
+  "diagnostico": "Cbc micronodular",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Rayos X de cráneo, proyección AP y lateral: Realizar para descartar lesiones líticas secundarias a invasión de carcinoma de células basales, micronodular"
+    }
+  ]
+}
