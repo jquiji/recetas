@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2025-11-18_01-41-38_nm1p7b",
+  "paciente": "Cesar-Morales",
+  "telefono": "122976730",
+  "email": "rosichiguar@hotmail.com",
+  "diagnostico": "Eccema y balanitis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Clotrimazole 0.05% crema: Usar en área afectada de región púbica en la mañana y en la noche por dos semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Clotrimazole 1% crema: Aplicar en área de glande mañana y noche por tres semanas"
+    },
+    {
+      "n": 3,
+      "texto": "Cicaplast Baume B5 bálsamo: Usar en área afectada de región púbica y glande mañana, tarde y noche hasta reparar"
+    },
+    {
+      "n": 4,
+      "texto": "Solución salina 0.09%: Usar durante el lavado diario de región genital durante tres semanas"
+    }
+  ]
+}
