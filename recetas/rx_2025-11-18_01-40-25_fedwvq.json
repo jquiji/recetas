@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2025-11-18_01-40-25_fedwvq",
+  "paciente": "Cesar-Morales",
+  "telefono": "122976730",
+  "email": "rosichiguar@hotmail.com",
+  "diagnostico": "Eccema y balanitis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Hound Dog: Usar"
+    }
+  ]
+}
