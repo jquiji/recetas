@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2025-11-18_01-45-44_ach9a9",
+  "paciente": "Cesar-Morales",
+  "telefono": "122976730",
+  "email": "rosichiguar@hotmail.com",
+  "diagnostico": "Onicomicosis y tiña plantar",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Enitrax 100 mg: Tomar 2 pastillas después del desayuno y 2 pastillas después de la cena por una semana. Luego descansar por 3 semanas. Repetir este ciclo por 3 meses en total"
+    },
+    {
+      "n": 2,
+      "texto": "Tervinex crema 1%: Aplicar en ambos pies en área de planta, interdigital y dorso en la mañana y en la noche por 3 semanas"
+    },
+    {
+      "n": 3,
+      "texto": "Cera de antirreducidades: Aplicar en pies en la mañana y en la noche hasta reparar"
+    }
+  ]
+}
