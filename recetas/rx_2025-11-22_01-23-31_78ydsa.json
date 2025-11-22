@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2025-11-22_01-23-31_78ydsa",
+  "paciente": "Johanna-Cabrera",
+  "telefono": "50242143414",
+  "email": "johanna.cabrera84@gmail.com",
+  "diagnostico": "Eccema y cuidados corporales",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Clobezol 0.05%: Aplicar capa fina en área de eczema mañana y noche por dos semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Cicaplasma UV5 Bálsamo: Usar capa fina en área de eczema mañana, tarde y noche hasta reparar"
+    },
+    {
+      "n": 3,
+      "texto": "PH5 Advance Repair tarro: Aplicar de cuello a pies en la mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "Glicolic 10%: Aplicar en áreas oscuras como codos y piernas por las noches, día lunes, miércoles y viernes"
+    }
+  ]
+}
