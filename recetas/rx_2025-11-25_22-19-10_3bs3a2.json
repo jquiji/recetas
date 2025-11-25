@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2025-11-25_22-19-10_3bs3a2",
+  "paciente": "Jose-Luis-Monzon",
+  "telefono": "50242173516",
+  "email": "Jmonzon@hpc.com.gt",
+  "diagnostico": "",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Rivotril: Tomar dos gotas en la mañana y dos gotas por la noche"
+    }
+  ]
+}
