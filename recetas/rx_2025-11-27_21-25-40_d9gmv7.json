@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2025-11-27_21-25-40_d9gmv7",
+  "paciente": "Jose-luis-Monzon",
+  "telefono": "50242173516",
+  "email": "jmonzon@hpc.com.gt",
+  "diagnostico": "Cbc",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Bactemicina: Tomar 2 tabletas de 300 mg cada 8 horas por 7 días"
+    }
+  ]
+}
