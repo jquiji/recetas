@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2025-12-14_17-11-27_eznlmi",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "email": "jose.quiji@gmail.com",
+  "diagnostico": "30224593",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Minoxidil: Tomar 5 mg una vez al día"
+    }
+  ]
+}
