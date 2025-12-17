@@ -1,0 +1,33 @@
+{
+  "rxId": "rx_2025-12-17_22-38-04_44i029",
+  "paciente": "Yesica-Herlinda-Bocel-Tun",
+  "telefono": "50258661889",
+  "email": "titan19@gmail.com",
+  "diagnostico": "Rosacea",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Ruboril Cleansing Balm: Usar para el lavado de rostro mañana y noche. Dejar actuar la espuma por 15 a 20 segundos y lavar con agua"
+    },
+    {
+      "n": 2,
+      "texto": "Mineral 89 Probiotic Fractions (Vichy): Aplicar en rostro 3 a 4 gotas en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Ruboril Expert M (ISISPHARMA): Usar en rostro mañana y noche"
+    },
+    {
+      "n": 4,
+      "texto": "Heliocare 360° Mineral Tolerance Fluid (Cantabria Labs): Usar en rostro cada 4 horas, por ejemplo, 7 a.m., 11 a.m. y 2 p.m."
+    },
+    {
+      "n": 5,
+      "texto": "Acnane al 15%: Aplicar capa fina por las noches. Primera semana usar noches alternas y a partir de la segunda semana utilizar todas las noches"
+    },
+    {
+      "n": 6,
+      "texto": "Cicaplast Baume B5 (La Roche-Posay): Usar en áreas afectadas en la mañana, tarde y noche hasta reparar"
+    }
+  ]
+}
