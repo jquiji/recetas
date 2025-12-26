@@ -1,0 +1,37 @@
+{
+  "rxId": "rx_2025-12-26_19-32-48_6zuexz",
+  "paciente": "Maria-Mendizabal",
+  "telefono": "50231017649",
+  "email": "fmendizabal95@gmail.com",
+  "diagnostico": "Acné mujer adulta",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Cleanance Gel (Avène): Lavado del rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Dermopure Triple Effect Serum (Eucerin): Usar en el rostro por las mañanas"
+    },
+    {
+      "n": 3,
+      "texto": "Tint Derm Hydra: Aplicar en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "Eloquer Oil Free, tono medio: Usar en el rostro cada cuatro horas, por ejemplo, 7 de la mañana, 11 de la mañana y 2 de la tarde"
+    },
+    {
+      "n": 5,
+      "texto": "Retin-A 0.025%: Usar la cantidad de un frijolito por las noches. Primera semana, utilizar noches alternas y luego utilizar noches diarias"
+    },
+    {
+      "n": 6,
+      "texto": "Doquim 4%: Utilizar capa fina solo en lenteos, noches alternas por dos semanas. Posterior tolerancia, aplicar diario por las noches"
+    },
+    {
+      "n": 7,
+      "texto": "Cicaplast Baume B5 (La Roche-Posay): Usar diario en área de crioterapia, en la mañana, tarde y noche, hasta reparar"
+    }
+  ]
+}
