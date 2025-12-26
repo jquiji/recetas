@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2025-12-26_20-50-22_7gqz7v",
+  "paciente": "Jaime-Nufio",
+  "telefono": "50230176748",
+  "email": "jaimealealv@gmail.com",
+  "diagnostico": "Rosacea",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Minéral 89 Probiotic Fractions (Vichy): Aplicar 3 gotas en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Ruboril Expert M (ISISPHARMA): Aplicar en áreas rojas en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Fusion Water MAGIC (ISDIN): Aplicar en el rostro cada 4 horas"
+    },
+    {
+      "n": 4,
+      "texto": "Soolantra: Aplicar capa fina en el rostro por las noches"
+    }
+  ]
+}
