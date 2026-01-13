@@ -1,0 +1,33 @@
+{
+  "rxId": "rx_2026-01-13_02-40-23_cdz8t8",
+  "paciente": "Alexandra-Orantes",
+  "telefono": "177838210",
+  "email": "alexandraorantes02@gmail.com",
+  "diagnostico": "Psoriasis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Dermosupril 0.1%: Aplicar en áreas de placa en rostro, capa fina en la mañana y la noche por 2 semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Cicaplast Baume B5: Aplicar en áreas afectadas de rostro en la mañana, tarde y noche hasta reparar"
+    },
+    {
+      "n": 3,
+      "texto": "LockBed Lotion: Aplicar en áreas de placa de piel cabelluda y cuello en la mañana y la noche por 4 semanas"
+    },
+    {
+      "n": 4,
+      "texto": "Dercos Shampoo: Utilizar en el lavado diario de piel cabelluda por un mes y luego utilizar días alternos"
+    },
+    {
+      "n": 5,
+      "texto": "Metotrexato 2.5 mg: Tomar 3 pastillas después del desayuno y 2 pastillas después del almuerzo el día sábado"
+    },
+    {
+      "n": 6,
+      "texto": "Ácido fólico 5 mg: Tomar una pastilla al día excepto el día sábado"
+    }
+  ]
+}
