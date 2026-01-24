@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-01-24_15-34-03_jg10lc",
+  "paciente": "Veronica-Tejada",
+  "telefono": "50233879911",
+  "email": "veronicatejada24@gmail.com",
+  "diagnostico": "Acné mujer adulta",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Jabón para lavado de rostro: Usar en la mañana y en la noche durante 7 días únicamente"
+    },
+    {
+      "n": 2,
+      "texto": "Crema hidratante: Aplicar en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Protector solar: Aplicar por las mañanas y cada 4 horas"
+    },
+    {
+      "n": 4,
+      "texto": "Agnestil Activa Blemish: Utilizar en el rostro en capa fina posterior al lavado"
+    },
+    {
+      "n": 5,
+      "texto": "Aldactone: Tomar pastilla y media después del desayuno hasta nueva orden"
+    }
+  ]
+}
