@@ -1,0 +1,37 @@
+{
+  "rxId": "rx_2026-02-01_00-05-00_y3821c",
+  "paciente": "Angelica-Blanco",
+  "telefono": "50231712615",
+  "email": "gbma.27@gmail.com",
+  "diagnostico": "Lentigos solares",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Dermatoplim limpiador: Utilizar durante el lavado del rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "C-VIT 5 (Sesderma): Utilizar 3 a 4 gotas en el rostro por las mañanas"
+    },
+    {
+      "n": 3,
+      "texto": "Hyalu B5 serum: Utilizar 3 a 4 gotas en la mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "Anti-Pigment Crema de Día SPF 30: Utilizar en el rostro por las mañanas"
+    },
+    {
+      "n": 5,
+      "texto": "Trisiderm SPF 50: Utilizar en el rostro cada 4 horas"
+    },
+    {
+      "n": 6,
+      "texto": "Fórmula magistral de hidroquinona más ácido kójico: Aplicar puntual por las noches únicamente en manchas"
+    },
+    {
+      "n": 7,
+      "texto": "Hyalu B5 Gel Crema: Utilizar en las noches en toda la cara"
+    }
+  ]
+}
