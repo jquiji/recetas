@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-02-09_22-30-46_kz46vn",
+  "paciente": "Lorena-Fernandez",
+  "telefono": "50244351763",
+  "email": "gabriela.sequeira@gmail.com",
+  "diagnostico": "Tiña pedis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Farmicil crema al 1%: Usar en todo el pie en la mañana y en la noche por 3 semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Cicaplasma o Mebe 5 Bálsamo: Usar entre los dedos en la mañana, tarde y noche hasta reparar. Posteriormente utilizar en la mañana y en la noche como mantenimiento"
+    },
+    {
+      "n": 3,
+      "texto": "Ceraventilosidades: Usar en rodillas en la mañana y en la noche, en pies usar por las noches los días lunes y viernes"
+    },
+    {
+      "n": 4,
+      "texto": "PH5 Advanced Repair tarro: Usar en todo el cuerpo en la mañana y en la noche"
+    },
+    {
+      "n": 5,
+      "texto": "Fusion Water Pediatrics: Usar cada 4 horas"
+    }
+  ]
+}
