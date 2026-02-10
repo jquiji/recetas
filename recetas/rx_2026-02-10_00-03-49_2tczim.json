@@ -1,0 +1,49 @@
+{
+  "rxId": "rx_2026-02-10_00-03-49_2tczim",
+  "paciente": "Gabriela-Sequeira",
+  "telefono": "50244351763",
+  "email": "gabriela.sequiera@gmail.com",
+  "diagnostico": "Dermatitis seborreica",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Betasol espuma 0.05%: Usar en piel cabelluda en la mañana y en la noche por dos semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Dercos shampoo: Usar diario por dos semanas, dejar actuar por tres minutos y luego utilizar días alternos con shampoo anticaspa de preferencia; al finalizar el primer frasco, comprar un segundo frasco y utilizar de mantenimiento lunes y viernes"
+    },
+    {
+      "n": 3,
+      "texto": "Folipil loción 5%: Usar 1 mL en piel cabelluda, hacer masaje por cinco minutos en la mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "Hydrating Cleanser Cream to Foam: Utilizar durante el lavado del rostro en la mañana y en la noche"
+    },
+    {
+      "n": 5,
+      "texto": "Sesvitamin C 5 Serum (Sesderma): Usar tres gotas en el rostro por las mañanas"
+    },
+    {
+      "n": 6,
+      "texto": "Anti-Pigment Ultra Light (Eucerin): Utilizar tres gotas en la mañana en todo el rostro"
+    },
+    {
+      "n": 7,
+      "texto": "Ruboril Expert M: Usar en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 8,
+      "texto": "Heliocare Oil-Free Color Gelcream SPF 50: Utilizar en el rostro cada cuatro horas"
+    },
+    {
+      "n": 9,
+      "texto": "Azelaic 15%: Usar capa fina en el rostro por las noches; primera semana usar noches alternas y luego utilizar diario"
+    },
+    {
+      "n": 10,
+      "texto": "Endoclinal 4%: Usar puntual en cada mancha por las noches; iniciar en dos semanas, primera semana noches alternas y luego diario"
+    }
+  ]
+}
