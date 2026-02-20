@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2026-02-20_15-58-51_qn8ljm",
+  "paciente": "Ricardo-Quijivix",
+  "telefono": "50248091417",
+  "email": "cesarquijivixm@gmail.com",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Paso 1. Acetaminofén 500 mg: Tomar 3 veces al día, cada 8 horas"
+    },
+    {
+      "n": 2,
+      "texto": "Paso 2. Ibuprofeno 600 mg: Tomar 2 veces al día, cada 12 horas"
+    }
+  ]
+}
