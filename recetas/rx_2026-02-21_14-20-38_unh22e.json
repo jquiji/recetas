@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2026-02-21_14-20-38_unh22e",
+  "paciente": "Claudia-Sanchez",
+  "telefono": "50240320203",
+  "email": "clau.clss14@gmail.com",
+  "diagnostico": "Dermatitis de contacto",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "en el rostro: Aplicar en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "en las manos: Aplicar en las manos después de cada lavado y a demanda"
+    },
+    {
+      "n": 3,
+      "texto": "Betasol Espuma 0.05%: Aplicar en áreas afectadas de manos en la mañana y en la noche por dos semanas"
+    },
+    {
+      "n": 4,
+      "texto": "Cicaplast Baume B5 (La Roche-Posay): Utilizar en áreas afectadas de manos mañana, tarde y noche hasta reparar"
+    }
+  ]
+}
