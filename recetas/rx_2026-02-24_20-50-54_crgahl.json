@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-02-24_20-50-54_crgahl",
+  "paciente": "Aarom-Linares",
+  "telefono": "50253363092",
+  "email": "aabenlinares@gmail.com",
+  "diagnostico": "Alopecia androgenica",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Paso 1. Minox 5 mg: Tomar 1 después de la cena todos los días"
+    },
+    {
+      "n": 2,
+      "texto": "Paso 2. Dutaflux 0.05%: Tomar 1 pastilla después de la cena diario"
+    },
+    {
+      "n": 3,
+      "texto": "Paso 3. Ultra D3 (Vitabiotics) 1.000 unidades: Tomar 1 después del desayuno por seis meses"
+    }
+  ]
+}
