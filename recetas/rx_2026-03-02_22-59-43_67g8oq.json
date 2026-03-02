@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-03-02_22-59-43_67g8oq",
+  "paciente": "Mildred-Sequeira",
+  "telefono": "50255237614",
+  "email": "minasequeira@gmail.com",
+  "diagnostico": "Piel seca",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Paso 1. PXC 5: Aplicar en todo el cuerpo de cuello a pies en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Paso 2. Antirodososidades: Utilizar en área de piernas y pies en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Paso 3. Jabón Dove: Utilizar durante el baño (baños cortos de 10 minutos, no agua caliente; usar agua tibia y evitar el uso de paste y esponja)"
+    },
+    {
+      "n": 4,
+      "texto": "Paso 4. FOSINC 20 mg: Tomar una después del almuerzo por 3 meses"
+    },
+    {
+      "n": 5,
+      "texto": "Paso 5. Omega 3: Tomar 2 pastillas después del almuerzo por 3 meses"
+    }
+  ]
+}
