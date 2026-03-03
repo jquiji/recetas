@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-03-03_23-34-46_3g122d",
+  "paciente": "Yeeun-Lee",
+  "telefono": "50258343329",
+  "email": "yeeun.lee@hotmail.com",
+  "diagnostico": "Dermatitis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Prednisona 50 mg: Tomar 1 tableta antes del desayuno por 5 días"
+    },
+    {
+      "n": 2,
+      "texto": "Hidrocortisona 1%: Aplicar una capa fina en el rostro por la mañana y por la noche por máximo 2 semanas"
+    },
+    {
+      "n": 3,
+      "texto": "Rupatadina 10 mg: Tomar 1 tableta cada 12 horas por 2 semanas"
+    }
+  ]
+}
