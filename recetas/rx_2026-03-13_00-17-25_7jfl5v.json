@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-03-13_00-17-25_7jfl5v",
+  "paciente": "Efrain-Chamo",
+  "telefono": "50255237614",
+  "email": "minasequeira@gmail.com",
+  "diagnostico": "Eccematide",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Aceite de baño Babé: Utilizar durante el baño diario. Evitar el uso de esponja o paste. Baños cortos de 5 a 10 minutos con agua tibia"
+    },
+    {
+      "n": 2,
+      "texto": "Betasol Espuma 0.05%: Utilizar en todas las áreas rojas con escama. Aplicar capa fina en la mañana y en la noche por dos semanas"
+    },
+    {
+      "n": 3,
+      "texto": "Cicaplast Baume B5: Utilizar en todas las áreas rojas con escama en la mañana, tarde y noche hasta reparar"
+    },
+    {
+      "n": 4,
+      "texto": "CeraVe: Utilizar de cuello a pies en la mañana, en la tarde y en la noche"
+    },
+    {
+      "n": 5,
+      "texto": "Rupatadina 10 mil gramos: Tomar una tableta cada 12 horas por 10 días"
+    }
+  ]
+}
