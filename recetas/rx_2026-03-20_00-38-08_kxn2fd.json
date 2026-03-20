@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-03-20_00-38-08_kxn2fd",
+  "paciente": "Fernando-Munoz",
+  "telefono": "50230224593",
+  "email": "jose.quiji@gmail.com",
+  "diagnostico": "ALOPECIA",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Paso 1. Minoxidil: 5 mg"
+    },
+    {
+      "n": 2,
+      "texto": "Paso 2. Dutasterida: 10 mg 3 veces al día"
+    },
+    {
+      "n": 3,
+      "texto": "Paso 3. Dexketoprofeno (MK): 25 mg una vez al día"
+    }
+  ]
+}
