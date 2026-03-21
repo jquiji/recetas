@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2026-03-21_14-33-21_juyb2f",
+  "paciente": "Tomas-Canil",
+  "telefono": "50259992483",
+  "email": "smejiat3@miumg.edu.gt",
+  "diagnostico": "Acné papulopustular",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Gravol (Soféis): Tomar 40 mil gramos después del almuerzo los días lunes, miércoles, viernes y domingo"
+    },
+    {
+      "n": 2,
+      "texto": "Gravol (Soféis): Tomar 20 mil gramos después del almuerzo los días martes, jueves y sábado"
+    }
+  ]
+}
