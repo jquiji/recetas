@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-03-21_15-11-35_ky488s",
+  "paciente": "Mildred-Archila",
+  "telefono": "50243680430",
+  "email": "mildredarchila14d@gmail.com",
+  "diagnostico": "Acné pp resuelto",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Cleanser Gel de Avena: Utilizar en el lavado de rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Agnestil PD Serum: Utilizar 3 gotas en el rostro en la mañana"
+    },
+    {
+      "n": 3,
+      "texto": "Tinderm Hydra: Utilizar en el rostro mañana y noche"
+    },
+    {
+      "n": 4,
+      "texto": "Fusion Water Magic: Utilizar en el rostro cada 4 horas"
+    },
+    {
+      "n": 5,
+      "texto": "Retin-A 0.025%: Utilizar una capa fina del tamaño de un frijolito por las noches; iniciar primera semana noches alternas y posterior noches diarias"
+    }
+  ]
+}
