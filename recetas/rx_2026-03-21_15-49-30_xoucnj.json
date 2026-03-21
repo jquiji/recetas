@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-03-21_15-49-30_xoucnj",
+  "paciente": "Andrea-Martinez",
+  "telefono": "50259595276",
+  "email": "rocioanmar0502@gmail.com",
+  "diagnostico": "Acné pp resuelto",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Acniben Espuma: Usar durante el lavado de la mañana y la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Acnederm 15%: Utilizar un frijolito en todo el rostro por la mañana"
+    },
+    {
+      "n": 3,
+      "texto": "Tinderm Hidra: Utilizar en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "Fusion Water (ISDIN): Utilizar en el rostro cada cuatro horas"
+    },
+    {
+      "n": 5,
+      "texto": "Fórmula triple de Acne: Utilizar un frijolito en toda la cara; primera semana usar en la noche lunes, miércoles y viernes; segunda semana usar noches alternas; tercera semana usar diario si hay tolerancia"
+    }
+  ]
+}
