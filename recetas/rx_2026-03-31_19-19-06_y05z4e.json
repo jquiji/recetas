@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2026-03-31_19-19-06_y05z4e",
+  "paciente": "Dana-Abed",
+  "telefono": "50250009282",
+  "email": "danaabed@gmail.com",
+  "diagnostico": "Dermatitis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Clove-Sol 0.00%: Aplicar en pápulas de la pierna de la mañana a la noche por dos semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Isoface 20 mg: Tomar una después del almuerzo el día martes"
+    }
+  ]
+}
