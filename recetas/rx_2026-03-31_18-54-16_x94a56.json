@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-03-31_18-54-16_x94a56",
+  "paciente": "Jaime-Klussmann",
+  "telefono": "50248091417",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Diarrea",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Examen de sangre simple completo: Realizar"
+    },
+    {
+      "n": 2,
+      "texto": "Hematología completa: Realizar 2 exámenes"
+    },
+    {
+      "n": 3,
+      "texto": "Química sanguínea (sodio, potasio, cloro, creatinina y BUN): Realizar 3 exámenes"
+    }
+  ]
+}
