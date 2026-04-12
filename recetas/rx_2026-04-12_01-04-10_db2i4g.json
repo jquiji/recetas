@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-04-12_01-04-10_db2i4g",
+  "paciente": "Luis-Alvarez",
+  "telefono": "50239922436",
+  "email": "vale.pame1990@gmail.com",
+  "diagnostico": "Liquen plano pigmentado",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Prelonia 20 mg: Tomar 1 cada 8 horas por 2 semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Rupatadina 10 mg: Tomar 1 cada 12 horas por 10 días"
+    },
+    {
+      "n": 3,
+      "texto": "Betasol espuma 0.05%: Utilizar capa fina en todas las áreas afectadas en la mañana y en la noche por 2 semanas"
+    },
+    {
+      "n": 4,
+      "texto": "Cicaplast Baume B5: Utilizar posterior a Betasol en cada una de las lesiones en la mañana y en la noche"
+    },
+    {
+      "n": 5,
+      "texto": "pH5 Advanced Repair: Utilizar de cuello a pies en la mañana y en la noche"
+    }
+  ]
+}
