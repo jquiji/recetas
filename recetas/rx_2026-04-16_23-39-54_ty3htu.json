@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2026-04-16_23-39-54_ty3htu",
+  "paciente": "Blanca-Alvarado",
+  "telefono": "50254782231",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Queratosis actinicas",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Efudix 5%: Aplicar una capa fina en lesiones rojas con escama por las noches, lunes, miércoles y viernes, durante 4 a 6 semanas aproximadamente"
+    },
+    {
+      "n": 2,
+      "texto": "Cicaplast Baume B5 (La Roche-Posay): Al finalizar de utilizar Efudix, reparar la piel utilizando el bálsamo en la mañana, tarde y noche hasta sanar"
+    },
+    {
+      "n": 3,
+      "texto": "Eryfotona SPF 100 (ISDIN): Aplicar en el rostro cada 4 horas, en horario de 7:00, 11:00 y 14:00"
+    },
+    {
+      "n": 4,
+      "texto": "Heliocare Advanced Spray: Utilizar en cuello y en brazos cada 4 horas, en horario de 7:00, 11:00 y 14:00"
+    }
+  ]
+}
