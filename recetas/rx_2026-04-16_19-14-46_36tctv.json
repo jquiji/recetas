@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-04-16_19-14-46_36tctv",
+  "paciente": "Jun-Pablo-Mendez",
+  "telefono": "50255284378",
+  "email": "mamafuhe@gmail.com",
+  "diagnostico": "Onicocriptosis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Clabolin C12 875/125: Tomar una tableta cada 12 horas por 7 días"
+    },
+    {
+      "n": 2,
+      "texto": "Farlaborin (sobres): Diluir un sobre en medio litro de agua tibia; sumergir el dedo por 10 a 15 minutos en la mañana y en la noche por una semana"
+    },
+    {
+      "n": 3,
+      "texto": "Pusimer B: Aplicar en el área afectada en la mañana y en la noche por una semana"
+    }
+  ]
+}
