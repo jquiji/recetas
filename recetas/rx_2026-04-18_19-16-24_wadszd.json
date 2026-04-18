@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2026-04-18_19-16-24_wadszd",
+  "paciente": "Enrique-Rojas",
+  "telefono": "50241284407",
+  "email": "erojascifuentes@gmail.com",
+  "diagnostico": "Dermatitis seborreica, queratosis pilaris, skincare",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Minoxidil: Usar según indicación médica"
+    }
+  ]
+}
