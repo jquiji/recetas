@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2026-04-23_23-29-56_rmxkmz",
+  "paciente": "Efrain-Chamo",
+  "telefono": "50242048192",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Prurigo por insectos",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Betasil crema: Aplicar capa fina en cada una de las ronchas en la mañana y en la noche por dos semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Cicaplast Baume B5 (La Roche-Posay): Aplicar en cada una de las ronchas en la mañana, tarde y noche hasta reparar"
+    },
+    {
+      "n": 3,
+      "texto": "Cedacal crema: Aplicar en las regiones con picazón a demanda"
+    },
+    {
+      "n": 4,
+      "texto": "Supraler Rapid: Tomar una tableta cada doce horas por un mes"
+    }
+  ]
+}
