@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2026-05-06_00-06-10_q4ev3o",
+  "paciente": "Micaela-Klussmann",
+  "telefono": "50233169380",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Rosace coeticoestropeada",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Doxiciclina 100 mg: Tomar 1 después del almuerzo por 3 meses"
+    },
+    {
+      "n": 2,
+      "texto": "Prelone 20 mg: Tomar 1 antes del desayuno por 2 semanas"
+    }
+  ]
+}
