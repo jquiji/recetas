@@ -1,0 +1,29 @@
+{
+  "rxId": "rx_2026-05-07_23-14-59_jxqxog",
+  "paciente": "Hans-Noack",
+  "telefono": "50252065999",
+  "email": "hnoack27@gmail.com",
+  "diagnostico": "Rosacea",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Sensibio Germicida: Usar durante el lavado del rostro en la mañana y en la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Minéral 89 Probiotic Fractions (Vichy): Usar 3 gotas en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 3,
+      "texto": "Acnederm 15%: Usar capa fina en el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "HELIOCARE Mineral Tolerance Fluid (Cantabria Labs): Utilizar en el rostro cada 4 horas"
+    },
+    {
+      "n": 5,
+      "texto": "Cicavio SPF 30: Utilizar en cada lesión quemada, mañana, tarde y noche, hasta cicatrizar"
+    }
+  ]
+}
