@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2026-05-29_02-08-20_bb6mmw",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "email": "jose.quiji@gmail.com",
+  "diagnostico": "Alopecia",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Fil de 5 mg: Tomar"
+    },
+    {
+      "n": 2,
+      "texto": "Ibuprofeno 600 mg (MK): Tomar 3 veces al día"
+    }
+  ]
+}
