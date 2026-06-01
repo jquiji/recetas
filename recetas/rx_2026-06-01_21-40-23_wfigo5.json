@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2026-06-01_21-40-23_wfigo5",
+  "paciente": "Mayra-Queche",
+  "telefono": "50238160279",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Dermatitis solar hipocromiante",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Betasol espuma 0.05%: Aplicar en áreas blancas en la mañana y en la noche por dos semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Tipuric 0.1%: Al finalizar de utilizar Betasol, continuar aplicando en áreas blancas en la mañana y en la noche hasta nuevo orden"
+    },
+    {
+      "n": 3,
+      "texto": "pH5 Advance Repair: Aplicar de cuello a pies en la mañana y en la noche"
+    },
+    {
+      "n": 4,
+      "texto": "Heliocare Advance Spray: Utilizar en áreas de exposición al sol cada 4 horas (7:00, 11:00 y 14:00)"
+    }
+  ]
+}
