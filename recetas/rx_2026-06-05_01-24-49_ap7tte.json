@@ -1,0 +1,33 @@
+{
+  "rxId": "rx_2026-06-05_01-24-49_ap7tte",
+  "paciente": "Mayte-Aguilar",
+  "telefono": "50232990849",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Rosacea eritematotelangiectasica",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Rodial Cleansing Balm: Utilizar para el lavado del rostro en la mañana y en la noche. Dejar actuar la espuma por 15 a 30 segundos y lavar con agua."
+    },
+    {
+      "n": 2,
+      "texto": "Mineral 80% Probiotics: Aplicar en el rostro 3 gotas en la mañana y en la noche."
+    },
+    {
+      "n": 3,
+      "texto": "Azelin 15%: Utilizar capa fina (un frijolito) en todo el rostro por las mañanas. Iniciar días alternos la primera semana y luego utilizar diario."
+    },
+    {
+      "n": 4,
+      "texto": "Rodial Expert S: Aplicar capa fina en el rostro en la mañana y en la noche."
+    },
+    {
+      "n": 5,
+      "texto": "Heliocare Mineral Tolerance Fluid: Utilizar en el rostro cada 4 horas. 7 de la mañana, 11 de la mañana, 11 de la tarde."
+    },
+    {
+      "n": 6,
+      "texto": "Solantra 1%: Aplicar capa fina (un frijolito) en el rostro por las noches. Iniciar noches alternas la primera semana y luego todas las noches."
+    }
+  ]
+}
