@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2026-06-10_00-05-32_f5079r",
+  "paciente": "Mayte-Pirir",
+  "telefono": "50241141002",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Tiña capitis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "250 mg: Tomar 1/2 tableta después del almuerzo por 6 semanas"
+    }
+  ]
+}
