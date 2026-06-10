@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2026-06-10_19-55-23_o9am8p",
+  "paciente": "Mary",
+  "telefono": "50241141002",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Escabiasis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Ivermectina 6 mg: Tomar 2 tabletas el día de hoy"
+    },
+    {
+      "n": 2,
+      "texto": "Ivermectina 6 mg: Repetir 2 tabletas el otro miércoles"
+    }
+  ]
+}
