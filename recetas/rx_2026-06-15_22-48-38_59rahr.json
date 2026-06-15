@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2026-06-15_22-48-38_59rahr",
+  "paciente": "Cristha-Quijivix",
+  "telefono": "50252065999",
+  "email": "cristha.quijivix@gmail.com",
+  "diagnostico": "Queratosis pilaris",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "SA Smoothing Cleanser (CeraVe): Utilizar en el área de queratosis pilaris durante el baño. Dejar actuar 15 segundos."
+    },
+    {
+      "n": 2,
+      "texto": "pH5 Advanced Repair (Eucerin): Utilizar de cuello a pies mañana y noche."
+    },
+    {
+      "n": 3,
+      "texto": "CeraVe Anti-Rugosidades (CeraVe): Utilizar en el área de queratosis pilaris mañana y noche."
+    },
+    {
+      "n": 4,
+      "texto": "Parlaborin: Diluir un sobre en medio litro de agua tibia y hacer lienzos por 10 a 15 minutos de la mañana a la noche hasta eliminar costra."
+    }
+  ]
+}
