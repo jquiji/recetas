@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2026-06-15_23-07-57_vohgwh",
+  "paciente": "Efrain-Chamo",
+  "telefono": "50242048192",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Jabón de aceite de Babe: Utilizar durante el baño; baños de cinco minutos, agua tibia, no paste ni esponja"
+    },
+    {
+      "n": 2,
+      "texto": "Lipikar Baume AP+M (La Roche-Posay): Utilizar de cuello a pies en la mañana y antes de dormir"
+    },
+    {
+      "n": 3,
+      "texto": "pH5 Advanced Repair (Eucerin): Utilizar de cuello a pies por la tarde"
+    },
+    {
+      "n": 4,
+      "texto": "Tipuric 0.1% o Cromus 0.1%: Utilizar en áreas de lesiones activas en la mañana y en la noche por dos semanas"
+    }
+  ]
+}
