@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-06-25_01-54-32_6br112",
+  "paciente": "Jose-Velasquez",
+  "telefono": "50241262705",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Tiña",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Enitrax: Tomar dos tabletas después del almuerzo por dos semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Salahin 2%: Utilizar en todo el pie en la mañana y en la noche por 4 semanas"
+    },
+    {
+      "n": 3,
+      "texto": "Tipuric 0.1%: Aplicar en manos en la mañana y en la noche por 4 semanas; posterior utilizar lunes, miércoles y viernes"
+    }
+  ]
+}
