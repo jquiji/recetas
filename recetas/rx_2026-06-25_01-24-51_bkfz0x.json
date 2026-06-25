@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2026-06-25_01-24-51_bkfz0x",
+  "paciente": "Jose-marvin-Velasquez",
+  "telefono": "50241262705",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Tiña",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Enitrax 100 mg: Tomar dos tabletas después del almuerzo por tres semanas"
+    }
+  ]
+}
