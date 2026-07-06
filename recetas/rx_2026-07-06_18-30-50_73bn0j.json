@@ -1,0 +1,17 @@
+{
+  "rxId": "rx_2026-07-06_18-30-50_73bn0j",
+  "paciente": "Damaris-Sarai-Arriaza-castro",
+  "telefono": "50248091417",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Infección gastrointestinal",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Seroterapia: Realizar seroterapia"
+    },
+    {
+      "n": 2,
+      "texto": "Antibiótico: Iniciar antibiótico"
+    }
+  ]
+}
