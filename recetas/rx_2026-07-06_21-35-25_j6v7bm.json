@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2026-07-06_21-35-25_j6v7bm",
+  "paciente": "Damaris-Sarai-Arriaza-castro",
+  "telefono": "50248091417",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Infección gastrointestinal",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Añadir uno: Paciente de 17 años"
+    }
+  ]
+}
