@@ -1,0 +1,33 @@
+{
+  "rxId": "rx_2026-07-12_01-12-36_wc3sss",
+  "paciente": "Julieta-Lopez",
+  "telefono": "50242162518",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Lentigos solares",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Effaclar Micro-Exfoliante (La Roche-Posay): Utilizar durante el lavado de rostro en la mañana y la noche"
+    },
+    {
+      "n": 2,
+      "texto": "Cevit 5: Aplicar 3 gotas en el rostro por la mañana"
+    },
+    {
+      "n": 3,
+      "texto": "Vitamina C de The Ordinary: Aplicar 3 gotas en el rostro por la mañana"
+    },
+    {
+      "n": 4,
+      "texto": "Aseane 15%: Aplicar un frijolito y distribuirlo por todo el rostro por las mañanas"
+    },
+    {
+      "n": 5,
+      "texto": "Hyaluronic Filler: Aplicar 3 gotas en el rostro por la noche"
+    },
+    {
+      "n": 6,
+      "texto": "Fórmula magistral tranexamen 5%: Aplicar un frijolito en todo el rostro por las noches"
+    }
+  ]
+}
