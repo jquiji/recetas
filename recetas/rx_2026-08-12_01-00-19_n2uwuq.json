@@ -1,0 +1,49 @@
+{
+  "rxId": "rx_2026-08-12_01-00-19_n2uwuq",
+  "paciente": "Claudia-Quijivix",
+  "telefono": "50233468205",
+  "email": "claudia.lqh@gmail.com",
+  "diagnostico": "",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Pilopeptan Intensive: Tomar 1 sobre al día por 1 mes"
+    },
+    {
+      "n": 2,
+      "texto": "Dercos (Vichy): Utilizar el shampoo anticaspa durante el lavado de cabello lunes, miércoles y viernes hasta finalizar; comprar un segundo frasco y utilizar de mantenimiento lunes y viernes"
+    },
+    {
+      "n": 3,
+      "texto": "Folipil Loción 5%: Usar 1 mL en la mañana y en la noche; al aplicar, hacer un masaje de 5 minutos sobre la piel cabelluda"
+    },
+    {
+      "n": 4,
+      "texto": "E-Writing Cleanser Cream to Foam: Lavar el rostro en la mañana y en la noche"
+    },
+    {
+      "n": 5,
+      "texto": "C-VIT 5 (Sesderma): Utilizar 3 gotas en el rostro por las mañanas"
+    },
+    {
+      "n": 6,
+      "texto": "HD Melan TXA Crema Gel de Día SPF: Usar en el rostro en la mañana"
+    },
+    {
+      "n": 7,
+      "texto": "A-Derma Exomega Control (A-Derma): Utilizar Trixera crema en el rostro mañana y noche"
+    },
+    {
+      "n": 8,
+      "texto": "Pigment Control Tinte SPF 50: Usar cada 4 horas; por ejemplo 7:00, 11:00 y 14:00"
+    },
+    {
+      "n": 9,
+      "texto": "Hidroquinona 4% + Kójico 4%: Usar una capa fina en el rostro por las noches; iniciar la primera semana lunes, miércoles y viernes; la segunda semana noches alternas; a partir de la tercera semana usar todas las noches"
+    },
+    {
+      "n": 10,
+      "texto": "Ristora Tape: Usar en cada una de las cicatrices y cambiar al caerse o cada semana hasta mejorar"
+    }
+  ]
+}
