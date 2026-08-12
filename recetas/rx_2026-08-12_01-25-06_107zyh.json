@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-08-12_01-25-06_107zyh",
+  "paciente": "Silvia-Hernandez",
+  "telefono": "50257090167",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Aplicar 1 mL en áreas de piel caída y hacer masaje en la mañana y en la noche por 5 minutos"
+    },
+    {
+      "n": 2,
+      "texto": "Betasol espuma 0.05%: Aplicar en áreas rojas e irritadas de piel caída en la mañana y en la noche por 2 semanas"
+    },
+    {
+      "n": 3,
+      "texto": "Tomar una pastilla al día por 3 a 6 veces"
+    }
+  ]
+}
