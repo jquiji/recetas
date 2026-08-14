@@ -1,0 +1,21 @@
+{
+  "rxId": "rx_2026-08-14_01-47-01_kstg78",
+  "paciente": "Carol-Klussmann",
+  "telefono": "50239907613",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Acne",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Vivitar 100 mg: Tomar 1 tableta antes del desayuno por 2 semanas"
+    },
+    {
+      "n": 2,
+      "texto": "Vivitar 100 mg: Posterior, tomar 1.5 tabletas antes del desayuno hasta nueva orden"
+    },
+    {
+      "n": 3,
+      "texto": "Isoface 20 mg: Tomar 1 tableta después del almuerzo los días lunes, miércoles y viernes hasta nueva orden"
+    }
+  ]
+}
