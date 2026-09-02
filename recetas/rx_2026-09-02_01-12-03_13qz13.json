@@ -1,0 +1,13 @@
+{
+  "rxId": "rx_2026-09-02_01-12-03_13qz13",
+  "paciente": "Jose-Quijivix",
+  "telefono": "50230224593",
+  "email": "jose.quiji@gmail.com",
+  "diagnostico": "Alopecia",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Minoxidil: Tomar 5 mg una vez al día"
+    }
+  ]
+}
