@@ -1,0 +1,25 @@
+{
+  "rxId": "rx_2026-09-17_00-41-28_t3b1gm",
+  "paciente": "Gabriela-Velez",
+  "telefono": "50248091417",
+  "email": "kathy.klussmann@gmail.com",
+  "diagnostico": "Onicomicosis",
+  "pasos": [
+    {
+      "n": 1,
+      "texto": "Onitrac 200 mg: Tomar 1 tableta antes del desayuno y 1 tableta después de la cena por 7 días; luego descansar 3 semanas y repetir el ciclo por 3 meses"
+    },
+    {
+      "n": 2,
+      "texto": "Loceryl: Aplicar en uñas afectadas 1 vez a la semana hasta curación"
+    },
+    {
+      "n": 3,
+      "texto": "Farbicil 1%: Aplicar en planta, entre dedos y dorsos de los pies en la mañana y en la noche por 3 semanas"
+    },
+    {
+      "n": 4,
+      "texto": "Cera de antioxidantes: Aplicar en pies en la mañana y en la noche hasta reparar"
+    }
+  ]
+}
